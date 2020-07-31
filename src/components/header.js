@@ -1,79 +1,82 @@
-import { graphql, useStaticQuery, Link } from "gatsby";
-import React, { useState } from "react";
+import React, {useState, useEffect, useRef} from "react";
+import { Link } from "gatsby";
+import PropTypes from "prop-types";
 
-function Header() {
-  const [isExpanded, toggleExpansion] = useState(false);
-  const { site } = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
+import gsap, {Power3} from 'gsap';
+
+import ButtonBordered from './elements/button-bordered/button-bordered';
+import Socials from './elements/socials/socials';
+import MainNav from './elements/mainnav/mainnav';
+import MenuToggleBtn from './elements/mainnav/menu-toggle-btn/menu-toggle-btn';
+
+import mainLogo from "../images/logo-main.png";
+import beautyLogo from "../images/pure-beauty-logo.png";
+import aestheticsLogo from "../images/pure-aesthetics-logo.png";
+import academyLogo from "../images/pure-academy-logo.png";
+import mobileLogo from "../images/header-icon.svg";
+
+const Header = ({loaded, logoType}) => {
+  let logoImage 
+  switch (logoType) {
+    case 'beauty':
+      logoImage = beautyLogo
+      break;
+    case 'aesthetics':
+      logoImage = aestheticsLogo
+      break;
+    case 'academy':
+      logoImage = academyLogo
+      break;
+    default:
+      logoImage = mainLogo
+      break;
+  }
+  const logo = useRef(null);
+  const bookBtn = useRef(null);
+  const socials = useRef(null);
+
+  const [toggled, setToggled] = useState(false)
+  const handleToggleMenu = () => {
+    setToggled((toggle) => !toggle);
+  }
+
+  useEffect(() => {
+    if(loaded) {  
+      gsap.fromTo(socials.current, {y: -15, opacity: 0}, {y: 0, opacity: 1, duration: 1, delay: .3, ease: Power3.easeInOut})
+      gsap.fromTo(logo.current, {y: -15, opacity: 0}, {y: 0, opacity: 1, duration: 1, delay: .5, ease: Power3.easeInOut}, 'logo')
+      gsap.fromTo(bookBtn.current, {y: -15, opacity: 0}, {y: 0, opacity: 1, duration: 1, delay: .7, ease: Power3.easeInOut})
     }
-  `);
+  }, [loaded]);
 
   return (
-    <header className="bg-teal-700">
-      <div className="flex flex-wrap items-center justify-between max-w-4xl p-4 mx-auto md:p-8">
-        <Link to="/">
-          <h1 className="flex items-center text-white no-underline">
-            <svg
-              className="w-8 h-8 mr-2 fill-current"
-              height="54"
-              viewBox="0 0 54 54"
-              width="54"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z" />
-            </svg>
-            <span className="text-xl font-bold tracking-tight">
-              {site.siteMetadata.title}
-            </span>
-          </h1>
-        </Link>
-
-        <button
-          className="flex items-center block px-3 py-2 text-white border border-white rounded md:hidden"
-          onClick={() => toggleExpansion(!isExpanded)}
-        >
-          <svg
-            className="w-3 h-3 fill-current"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <title>Menu</title>
-            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-          </svg>
-        </button>
-
-        <nav
-          className={`${
-            isExpanded ? `block` : `hidden`
-          } md:block md:flex md:items-center w-full md:w-auto`}
-        >
-          {[
-            {
-              route: `/about`,
-              title: `About`,
-            },
-            {
-              route: `/contact`,
-              title: `Contact`,
-            },
-          ].map((link) => (
-            <Link
-              className="block mt-4 text-white no-underline md:inline-block md:mt-0 md:ml-6"
-              key={link.title}
-              to={link.route}
-            >
-              {link.title}
+    <header className="relative z-50">
+      <div className="max-w-screen-xl py-2 px-2 sm:p-4 mx-auto md:p-4 w-full">
+        <div className="flex flex-wrap items-center justify-between">
+          <div ref={socials} className="hidden md:block w-1/4">
+            <Socials />
+          </div>
+          <div className="flex md:flex-1 flex-wrap flex-col items-center">
+            <Link className="md:mb-8" to="/">
+              <img ref={logo} className="hidden md:block" src={logoImage} />
+              <img className="w-16 md:hidden" src={mobileLogo} />
             </Link>
-          ))}
-        </nav>
+          </div>
+          <div ref={bookBtn} className="hidden md:block w-1/4 text-right">
+              <ButtonBordered text="Book Online" link="#" />
+          </div>
+          <MenuToggleBtn toggled={toggled} toggleMenu={handleToggleMenu} />
+        </div>
+        <div className="flex flex-wrap justify-center">
+          <MainNav loaded={loaded} toggled={toggled}/>
+        </div>
       </div>
     </header>
   );
 }
+
+Header.propTypes = {
+  loaded: PropTypes.bool,
+  logoType: PropTypes.string,
+};
 
 export default Header;

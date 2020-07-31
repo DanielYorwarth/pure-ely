@@ -1,0 +1,8 @@
+.blue-strip {
+  left: -65%;
+  height: 342px;
+  z-index: -1;
+  &--large {
+    height: 420px;
+  }
+}

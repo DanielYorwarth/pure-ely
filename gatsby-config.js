@@ -5,9 +5,9 @@ const fullConfig = resolveConfig(tailwindConfig);
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Tailwind`,
-    description: `Gatsby starter styled with Tailwind`,
-    author: `@taylorbryant`,
+    title: `Pure Ely`,
+    description: `Pure Ely is a Beauty, Aesthetics, Academy and Hair Salon based in Ely.`,
+    author: `@volleydigital`,
   },
   plugins: [
     `gatsby-plugin-eslint`,
@@ -21,21 +21,22 @@ module.exports = {
         background_color: fullConfig.theme.colors.white,
         theme_color: fullConfig.theme.colors.teal["400"],
         display: `minimal-ui`,
-        icon: `src/images/tailwind-icon.png`,
+        icon: `src/images/header-icon.svg`,
       },
     },
     {
       resolve: `gatsby-plugin-postcss`,
       options: {
         postCssPlugins: [
-          require(`tailwindcss`)(tailwindConfig),
-          require(`autoprefixer`),
+          require(`tailwindcss`)(fullConfig),
           ...(process.env.NODE_ENV === `production`
             ? [require(`cssnano`)]
             : []),
+            require(`autoprefixer`),
         ],
       },
     },
+    `gatsby-plugin-sass`,
     `gatsby-plugin-offline`,
   ],
 };

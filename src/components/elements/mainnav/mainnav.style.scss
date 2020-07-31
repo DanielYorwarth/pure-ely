@@ -1,0 +1,21 @@
+.mainnav {
+  &__item {
+    position: relative;
+    &::before {
+      transition: 0.2s;
+      content: '';
+      width: 0%;
+      top: 50%;
+      position: absolute;
+      left: -10px;
+      background-color: #11B3BA;
+      height: 3px;
+      transform: translate(0, -50%);
+    }
+    &:hover {
+      &::before {
+        width: 60%;
+      }
+    }
+  }
+}

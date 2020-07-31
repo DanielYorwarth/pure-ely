@@ -1,0 +1,50 @@
+.service-box {
+  overflow: hidden;
+  &--60 {
+    height: 60vh;
+  }
+  &--45 {
+    height: 45vh;
+  }
+  &__overlay, &__text, &__circle, &__image {
+    transition: 0.3s;
+  }
+  &__text {
+    position: absolute;
+    left: 50%;
+    top: 160%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+  }
+  &__circle {
+    transform: scale(0.5);
+    transition: 0.3s;
+    opacity: 0;
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    left: 50%;
+    border-radius: 50%;
+    top: 0px;
+    background-color: #11B3BA;
+    z-index: -1;
+  }
+  &:hover {
+    .service-box {
+      &__text {
+        opacity: 1;
+        top: 130%;
+      }
+      &__overlay {
+        opacity: 80%;
+      }
+      &__circle {
+        transform: scale(1);
+        opacity: 1;
+      }
+      &__image {
+        transform: scale(1.1);
+      }
+    }
+  }
+}

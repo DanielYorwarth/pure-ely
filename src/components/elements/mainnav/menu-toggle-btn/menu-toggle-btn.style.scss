@@ -1,0 +1,32 @@
+.menu-toggle-btn {
+  width: 60px;
+  height: 35px;
+  border: 1px solid;
+  z-index: 1000000;
+  position: relative;
+  &:hover {
+    .menu-toggle-btn {
+      &__textwrapper {
+        span, div {
+          transform: translateY(-19px);
+        }
+      }
+    }
+  }
+  &__textwrapper {
+    overflow: hidden;
+    position: relative;
+    span {
+      display: block;
+      transition: 0.3s;
+    }
+    div {
+      width: 100%;
+      text-align: center;
+      position: absolute;
+      left: 0;
+      top: 100%;
+      transition: 0.3s;
+    }
+  }
+}

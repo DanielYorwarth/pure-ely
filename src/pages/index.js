@@ -2,40 +2,71 @@ import React from "react";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import catAndHumanIllustration from "../images/cat-and-human-illustration.svg";
 
-function IndexPage() {
+import HeroFull from '../components/index/hero-full/hero-full';
+import Intro from '../components/index/intro/intro';
+import ServiceList from '../components/services/services-list';
+import Testimonials from '../components/elements/testimonials/testimonials';
+import BookCta from '../components/elements/book-cta/book-cta';
+import InstaFeed from '../components/elements/insta-feed/insta-feed';
+
+import feetHandsImage from '../images/hands-and-feet.jpg';
+import massageImage from '../images/massage.jpg';
+import waxingImages from '../images/waxing.jpg';
+import eyeTreatmentImage from '../images/eye-treatments-and-extentions.jpg';
+import laserHairImage from '../images/laser-hair-removal.jpg';
+import iplTreatmentImage from '../images/IPL-treatments.jpg';
+
+const IndexPage = () => {
   return (
     <Layout>
       <SEO
-        keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
+        keywords={[`Beauty Ely`, `Hair Salon Ely`, `Beauty Salon Ely`, `Nails Ely`, 'Nail Bar Ely']}
         title="Home"
       />
-
-      <section className="text-center">
-        <img
-          alt="Cat and human sitting on a couch"
-          className="block w-1/2 mx-auto mb-8"
-          src={catAndHumanIllustration}
-        />
-
-        <h2 className="inline-block p-3 mb-4 text-2xl font-bold bg-yellow-400">
-          Hey there! Welcome to your first Gatsby site.
-        </h2>
-
-        <p className="leading-loose">
-          This is a barebones starter for Gatsby styled using{` `}
-          <a
-            className="font-bold text-gray-900 no-underline"
-            href="https://tailwindcss.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Tailwind CSS
-          </a>
-          , a utility-first CSS framework.
-        </p>
-      </section>
+      <HeroFull loaded={true} />
+      <Intro />
+      <ServiceList height="60" services={[
+        {
+          title: 'Hands & Feet',
+          text: 'Discover',
+          image: feetHandsImage,
+          link: '#'
+        },
+        {
+          title: 'Massage',
+          text: 'Discover',
+          image: massageImage,
+          link: '#'
+        },
+        {
+          title: 'Waxing',
+          text: 'Discover',
+          image: waxingImages,
+          link: '#'
+        },
+        {
+          title: 'Eye Treatments & Extensions',
+          text: 'Discover',
+          image: eyeTreatmentImage,
+          link: '#'
+        },
+        {
+          title: 'Laser Hair Removal',
+          text: 'Discover',
+          image: laserHairImage,
+          link: '#'
+        },
+        {
+          title: 'IPL Treatments',
+          text: 'Discover',
+          image: iplTreatmentImage,
+          link: '#'
+        }
+      ]}/>
+      <Testimonials />
+      <BookCta marginBottom />
+      <InstaFeed />
     </Layout>
   );
 }

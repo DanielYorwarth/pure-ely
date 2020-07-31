@@ -1,0 +1,18 @@
+.testimonals {
+  &__circlequote {
+    width: 70px;
+    height: 70px;
+    background-color: #11B3BA;
+    border-radius: 50%;
+    color: #0B7277;
+    font-size: 100px;
+    position: absolute;
+    top: 22%;
+  }
+  &__circlequote-text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+} 

@@ -1,0 +1,22 @@
+.bordered-btn {
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  position: relative;
+  transition: 0.2s;
+  &::before {
+    transition: 0.2s;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 100%;
+    bottom: 0;
+    right: 0;
+    background-color: #fff;
+  }
+  &:hover {
+    color: #11B3BA;
+    &::before {
+      top: 0;
+    }
+  }
+}

@@ -1,0 +1,108 @@
+.hero-full {
+  margin-top: -214px;
+  position: relative;
+  &__sub {
+    cursor: pointer;
+    overflow: hidden;
+    border-right: 1px solid rgba(225,225,225, .35);
+    &-text {
+      display: block;
+      &::before, &::after {
+        transition: 0.3s;
+        content: '';
+        width: 15%;
+        height: 2px;
+        background-color: #fff;
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+      }
+      &::before {
+        left: 5%;
+      }
+      &::after {
+        right: 5%;
+      }
+    }
+    &-circle {
+      transform: scale(0.5);
+      opacity: 0;
+      transition: 0.3s;
+      width: 70px;
+      height: 70px;
+      position: absolute;
+      left: -15px;
+      border-radius: 50%;
+      top: 5px;
+      background-color: #11B3BA;
+    }
+    &-overlay {
+      opacity: 0;
+    }
+    &-image, &-overlay {
+      transition: 0.8s;
+    }
+    &:hover {
+      .hero-full {
+        &__sub {
+          &-circle {
+            transform: scale(1);
+            opacity: 1;
+          }
+          &-text {
+            &::before, &::after {
+              width: 90%;
+            }
+          }
+          &-image {
+            transform: scale(1.05);
+            opacity: 1;
+          }
+          &-overlay {
+            opacity: 0.4;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 639px) {
+  .hero-full {
+    margin-top: -75px;
+    position: relative;
+    &__sub {
+      border-bottom: 1px solid rgba(225,225,225, 1);
+      height: 50vh;
+      border-right: none;
+      &-image {
+        opacity: 1;
+      }
+      &-overlay {
+        opacity: 0.4;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .hero-full {
+    &__sub {
+      border-bottom: 1px solid rgba(225,225,225, .35);
+      height: 58vh;
+    }
+  }
+}
+
+
+@media only screen and (max-height: 550px) {
+  .hero-full {
+    padding-top: 200px;
+    &__sub {
+      width: 100% !important;
+      &-wrapper {
+        margin-top: 0;
+      }
+    }
+  }
+}

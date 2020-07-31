@@ -1,0 +1,26 @@
+.quote-snippet {
+  &:before {
+    content: '\201C';
+    position: absolute;
+    left: 0px;
+    top: -75px;
+    font-size: 12rem;
+    line-height: 1;
+    user-select: none;
+    color: #11B3BA;
+    z-index: -1;
+    opacity: 0.5;
+  }
+  &:after {
+    content: '\201D';
+    position: absolute;
+    right: 0px;
+    top: 20px;
+    font-size: 12rem;
+    line-height: 1;
+    user-select: none;
+    color: #11B3BA;
+    z-index: -1;
+    opacity: 0.5;
+  }
+}
