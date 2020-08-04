@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -19,59 +19,74 @@ import eyeTreatmentImage from '../images/eye-treatments-and-extentions.jpg';
 import laserHairImage from '../images/laser-hair-removal.jpg';
 import iplTreatmentImage from '../images/IPL-treatments.jpg';
 
-const BeautyPage = () => {
-  return (
-    <Layout pageType='beauty'>
-      <SEO
-        keywords={[`Beauty Ely`, `Massage Salon Ely`, `Beauty Treatments Ely`]}
-        title="Beauty"
-      />
-      <HeroFull loaded/>
-      <BeautyIntro />
-      <ServiceList height="60" services={[
-        {
-          title: 'Hands & Feet',
-          text: 'Discover',
-          image: feetHandsImage,
-          link: '#'
-        },
-        {
-          title: 'Massage',
-          text: 'Discover',
-          image: massageImage,
-          link: '#'
-        },
-        {
-          title: 'Waxing',
-          text: 'Discover',
-          image: waxingImages,
-          link: '#'
-        },
-        {
-          title: 'Eye Treatments & Extensions',
-          text: 'Discover',
-          image: eyeTreatmentImage,
-          link: '#'
-        },
-        {
-          title: 'Laser Hair Removal',
-          text: 'Discover',
-          image: laserHairImage,
-          link: '#'
-        },
-        {
-          title: 'IPL Treatments',
-          text: 'Discover',
-          image: iplTreatmentImage,
-          link: '#'
-        }
-      ]}/>
-      <Logos />
-      <Testimonials />
-      <BookCta marginBottom  />
-      <InstaFeed />
-    </Layout>
-  );
+class BeautyPage extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      loaded: false
+    }
+  }
+  componentDidMount() {
+    this.setState(() => ({loaded: true}))
+  }
+  componentWillUnmount() {
+    if (this.timeoutId) clearTimeout(this.timeoutId);
+    this.setState(() => ({loaded: false}))
+  }
+  render() {
+    return (
+      <Layout pageType='beauty'>
+        <SEO
+          keywords={[`Beauty Ely`, `Massage Salon Ely`, `Beauty Treatments Ely`]}
+          title="Beauty"
+        />
+        <HeroFull loaded={this.state.loaded}/>
+        <BeautyIntro />
+        <ServiceList height="45" services={[
+          {
+            title: 'Hands & Feet',
+            text: 'Discover',
+            image: feetHandsImage,
+            link: '#'
+          },
+          {
+            title: 'Massage',
+            text: 'Discover',
+            image: massageImage,
+            link: '#'
+          },
+          {
+            title: 'Waxing',
+            text: 'Discover',
+            image: waxingImages,
+            link: '#'
+          },
+          {
+            title: 'Eye Treatments & Extensions',
+            text: 'Discover',
+            image: eyeTreatmentImage,
+            link: '#'
+          },
+          {
+            title: 'Laser Hair Removal',
+            text: 'Discover',
+            image: laserHairImage,
+            link: '#'
+          },
+          {
+            title: 'IPL Treatments',
+            text: 'Discover',
+            image: iplTreatmentImage,
+            link: '#'
+          }
+        ]}/>
+        <Logos />
+        <Testimonials />
+        <BookCta marginBottom  />
+        <InstaFeed />
+      </Layout>
+    );
+  }
 }
 
 export default BeautyPage;

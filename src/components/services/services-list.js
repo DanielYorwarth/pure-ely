@@ -15,7 +15,7 @@ const ServiceList = ({services, height}) => {
         of our wide variety of treatments.</h3>
         <div className="flex flex-wrap">
         {services.map(({title, image, text, link}, i) => (
-          <div key={i} className="w-full sm:w-1/2">
+          <div key={i} className="w-full sm:w-1/2 md:w-1/3">
             <ServiceBox height={height} service={{title, image, text, link}} />
           </div>
         ))}
