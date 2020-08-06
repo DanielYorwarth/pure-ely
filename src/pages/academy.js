@@ -25,7 +25,7 @@ class AcademyPage extends Component {
   }
   render() {
     return (
-      <Layout pageType='acadamey'>
+      <Layout pageType='academy'>
         <SEO
           keywords={[`Beauty Academy Ely`, `Beauty Training Ely`, `Hair Training Ely`, `Beauty Academy Ely`]}
           title="Academy"
@@ -35,13 +35,13 @@ class AcademyPage extends Component {
           bgImage={academyBgImage}
           data={{
             title: 'COMING SOON',
-            subTitle: 'tetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation tetur adipiscing elit, sed do eiusmod tempor incididunt ut la',
+            subTitle: 'Our highly skilled therapists and hairdressers at our Training Academy will be offering a wide range of courses. Including; Beauty therapy courses ranging from Gel polish Manicures, to LVL lash lifts',
             fourCol: {
               title: <ButtonBordered text="Register interest" link="#" />,
               textList: [
-                <div key={1}><ListItem text="Manicure" /><ListItem text="Pedicure" /></div>,
-                <div key={2}><ListItem text="Gel Polish Manicure" /><ListItem text="Gel Polish Pedicure" /></div>,
-                <div key={3}><ListItem text="Semi Permanent Make Up" /></div>
+                <div key={1}><ListItem text="Beauty therapy courses ranging from Gel polish Manicures, to LVL lash lifts" /></div>,
+                <div key={3}><ListItem text="Hair dressing courses, ranging from cutting to product sales skills. " /></div>,
+                <div key={2}><ListItem text="Semi-Permanent Make up" /></div>,
               ]
             }
           }}

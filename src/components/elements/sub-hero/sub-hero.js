@@ -13,7 +13,6 @@ const SubFull = ({loaded, bgImage, marginBottom, data}) => {
 
   useEffect(() => {
     if(loaded) {  
-      gsap.fromTo(heroImageEl.current, {y: -20, opacity: 0}, {y: 0, opacity: 1, duration: 1, ease: Power3.easeInOut})
       gsap.fromTo(textWrapper.current, {y: -20, opacity: 0}, {y: 0, opacity: 1, duration: 1, delay: 1.4, ease: Power3.easeInOut})
     }
   }, [loaded]);

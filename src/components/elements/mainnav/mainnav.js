@@ -1,5 +1,6 @@
 import React, {useRef, useEffect} from "react";
-import { Link } from "gatsby";
+import AniLink from "gatsby-plugin-transition-link/AniLink"
+
 import PropTypes from "prop-types";
 
 import gsap from 'gsap';
@@ -10,20 +11,24 @@ import './mainnav.style.scss';
 
 const MainNav = ({menu = [
   {
-    route: `#`,
+    route: `/`,
     title: `Home`,
   },
   {
-    route: `#`,
+    route: `/beauty`,
     title: `Beauty`,
   },
   {
-    route: `#`,
+    route: `/aesthetics`,
     title: `Aesthetics`,
   },
   {
-    route: `#`,
+    route: `/academy`,
     title: `Academy`,
+  },
+  {
+    route: `#`,
+    title: `Hair`,
   },
   {
     route: `#`,
@@ -59,12 +64,17 @@ const MainNav = ({menu = [
       >
         {menu.map((link) => (
           <div key={link.title} className="md:px-6">
-            <Link
+            <AniLink
+              cover   
+              top="entry"
+              direction="up"
+              duration={1.2}
+              bg="#11B3BA"
               className="mainnav__item block text-white no-underline md:inline-block uppercase text-sm"
               to={link.route}
             >
               {link.title}
-            </Link>
+            </AniLink>
             </div>
         ))}
       </nav>

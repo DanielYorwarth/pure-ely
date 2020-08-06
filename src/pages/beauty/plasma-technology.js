@@ -109,6 +109,7 @@ class ServicePage extends Component {
                 key={1}
                 title="Your first steps to beautiful skin"
                 upperText={<p>
+                  <span className="text-sm block mb-2 text-lg font-semibold">Skin tightening</span>
                   Upper eyelid lift & Crows feet: <span className="font-semibold text-primary">£350</span><br/>
                   Crows feet only: <span className="font-semibold text-primary">£250</span><br/>
                   Forehead or Glabella: <span className="font-semibold text-primary">£200</span><br/>
@@ -116,6 +117,12 @@ class ServicePage extends Component {
                   Lip/Mouth area: <span className="font-semibold text-primary">£150</span><br/>
                   Pigmentation & skin tag removal: From <span className="font-semibold text-primary">£35</span><br/>
                   Patch test: <span className="font-semibold text-primary">£35</span>
+                  <span className="text-sm block mb-4">*A Patch test for skin tightening treatments is required</span>
+                  Pigmentation: <span className="font-semibold text-primary">£35</span><br/>
+                  Skin Tag Removal: <span className="font-semibold text-primary">£35</span><br/>
+                  Mole Removal: <span className="font-semibold text-primary">£35</span><br/>
+                  Plasma Shower Rejuvenation: <span className="font-semibold text-primary">£150</span><br/>
+
                 </p>}
               />
             },

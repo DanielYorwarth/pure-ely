@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'gatsby';
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 import Socials from '../elements/socials/socials';
 
@@ -20,20 +21,24 @@ const Footer = () => {
           <ul className="flex flex-wrap mb-6 md:mb-0 justify-center md:justify-start leading-loose">
             {[
               {
-                route: `#`,
+                route: `/`,
                 title: `Home`,
               },
               {
-                route: `#`,
+                route: `/beauty`,
                 title: `Beauty`,
               },
               {
-                route: `#`,
+                route: `/aesthetics`,
                 title: `Aesthetics`,
               },
               {
-                route: `#`,
+                route: `/academy`,
                 title: `Academy`,
+              },
+              {
+                route: `#`,
+                title: `Hair`,
               },
               {
                 route: `#`,
@@ -43,7 +48,19 @@ const Footer = () => {
                 route: `#`,
                 title: `Contact`,
               }
-            ].map(menuItem => <li className="pr-8 uppercase mb-2 md:mb-0" key={menuItem.title}><Link to={menuItem.route}>{menuItem.title}</Link></li>)}
+            ].map(menuItem => (
+              <li className="pr-8 uppercase mb-2 md:mb-0" key={menuItem.title}>
+                <AniLink 
+                  cover   
+                  top="entry"
+                  direction="up"
+                  duration={1.2}
+                  bg="#11B3BA" 
+                  to={menuItem.route}>
+                  {menuItem.title}
+                </AniLink>
+              </li>
+            ))}
           </ul>
         </div>
         <div className="w-full md:w-1/3 text-center md:text-right leading-relaxed">

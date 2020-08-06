@@ -45,37 +45,51 @@ class IndexPage extends React.Component {
             title: 'Hands & Feet',
             text: 'Discover',
             image: feetHandsImage,
-            link: '#'
+            link: '/beauty/hands-and-feet'
           },
           {
             title: 'Massage',
             text: 'Discover',
             image: massageImage,
-            link: '#'
+            link: '/beauty/massage'
           },
           {
             title: 'Waxing',
             text: 'Discover',
             image: waxingImages,
-            link: '#'
+            link: '/beauty/waxing'
           },
           {
             title: 'Eye Treatments & Extensions',
             text: 'Discover',
             image: eyeTreatmentImage,
-            link: '#'
+            link: '/beauty/eye-treatments'
           },
           {
             title: 'Laser Hair Removal',
             text: 'Discover',
             image: laserHairImage,
-            link: '#'
+            link: '/beauty/laser-hair-removal'
           },
           {
-            title: 'IPL Treatments',
+            title: 'Plasma Technology',
             text: 'Discover',
             image: iplTreatmentImage,
-            link: '#'
+            link: '/beauty/plasma-technology'
+          }
+          ,
+          {
+            title: 'Pure Facials',
+            text: 'Discover',
+            image: iplTreatmentImage,
+            link: '/beauty/pure-facials'
+          }
+          ,
+          {
+            title: 'Other Treatments',
+            text: 'Discover',
+            image: iplTreatmentImage,
+            link: '/beauty/other-treatments'
           }
         ]}/>
         <Testimonials />

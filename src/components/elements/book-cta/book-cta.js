@@ -23,7 +23,7 @@ const BookCta = ({marginBottom}) => (
             You can book appointments by calling <b>01353 661 321</b> or direct with our online booking system. 
             Please feel free to message us on <b>Facebook</b> or by email at <b>info@pureely.co.uk.</b>
           </p>
-          <ButtonBordered text='Book Online' link='#' />
+          <ButtonBordered windowed text='Book Online' link='https://online.premiersoftware.co.uk/Book-Online-3G-V2/index2.php?i=21cea48d674d25790ce2f157548cf742&siteID=2' />
         </div>
       </div>
       <div className="inset-0 absolute bg-primary-darker opacity-75"/>

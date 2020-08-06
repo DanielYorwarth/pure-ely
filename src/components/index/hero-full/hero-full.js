@@ -1,5 +1,6 @@
 import React, {useRef, useEffect} from "react";
 import PropTypes from "prop-types";
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 import gsap, {Power3} from 'gsap';
 
@@ -44,48 +45,80 @@ const HeroFull = ({loaded}) => {
     <div className="hero-full flex flex-wrap w-full mb-10 md:mb-24">
       <div ref={sectorsWrapper} className="flex flex-wrap w-full relative z-10">
         <div className="hero-full__sub  h-screen  flex flex-col justify-center items-center w-full sm:w-1/2 lg:w-1/4 text-center h-full relative">
-          <div className="hero-full__sub-wrapper uppercase text-white sm:mt-24 relative z-10">
-            <div className="hero-full__sub-circle"/>
-            <h2 className="hero-full__sub-title relative text-3xl xl:text-4xl font-light mb-2">Beauty</h2>
-            <span className="hero-full__sub-text relative font-light text-sm">Discover</span>
-          </div>
-          <div ref={imageHovers[0]}>
-            <div style={{backgroundImage: `url(${beautyImage})`}}  className="hero-full__sub-image bg-image absolute top-0 left-0 w-full h-full opacity-0"/>
-            <div className="hero-full__sub-overlay overlay-bg absolute top-0 left-0 w-full h-full" />
-          </div>
+          <AniLink    
+            cover   
+            top="entry"
+            direction="up"
+            duration={1}
+            bg="#11B3BA" to='/beauty'
+          >
+            <div className="hero-full__sub-wrapper uppercase text-white sm:mt-24 relative z-10">
+              <div className="hero-full__sub-circle"/>
+              <h2 className="hero-full__sub-title relative text-3xl xl:text-4xl font-light mb-2">Beauty</h2>
+              <span className="hero-full__sub-text relative font-light text-sm">Discover</span>
+            </div>
+            <div ref={imageHovers[0]}>
+              <div style={{backgroundImage: `url(${beautyImage})`}}  className="hero-full__sub-image bg-image absolute top-0 left-0 w-full h-full opacity-0"/>
+              <div className="hero-full__sub-overlay overlay-bg absolute top-0 left-0 w-full h-full" />
+            </div>
+          </AniLink>
         </div>
         <div className="hero-full__sub h-screen flex flex-col justify-center items-center w-full sm:w-1/2 lg:w-1/4 text-center h-full relative">
-          <div className="hero-full__sub-wrapper uppercase text-white sm:mt-24 relative z-10">
-            <div className="hero-full__sub-circle"/>
-            <h2 className="hero-full__sub-title relative text-3xl xl:text-4xl font-light mb-2">Aesthetics</h2>
-            <span className="hero-full__sub-text relative font-light text-sm">Discover</span>
-          </div>
-          <div ref={imageHovers[1]}>
-            <div style={{backgroundImage: `url(${aestheticsImage})`}}  className="hero-full__sub-image bg-image absolute top-0 left-0 w-full h-full opacity-0"/>
-            <div className="hero-full__sub-overlay overlay-bg absolute top-0 left-0 w-full h-full" />
-          </div>
+          <AniLink    
+            cover   
+            top="entry"
+            direction="up"
+            duration={1}
+            bg="#11B3BA" to='/aesthetics'
+          >
+            <div className="hero-full__sub-wrapper uppercase text-white sm:mt-24 relative z-10">
+              <div className="hero-full__sub-circle"/>
+              <h2 className="hero-full__sub-title relative text-3xl xl:text-4xl font-light mb-2">Aesthetics</h2>
+              <span className="hero-full__sub-text relative font-light text-sm">Discover</span>
+            </div>
+            <div ref={imageHovers[1]}>
+              <div style={{backgroundImage: `url(${aestheticsImage})`}}  className="hero-full__sub-image bg-image absolute top-0 left-0 w-full h-full opacity-0"/>
+              <div className="hero-full__sub-overlay overlay-bg absolute top-0 left-0 w-full h-full" />
+            </div>
+          </AniLink>
         </div>
         <div className="hero-full__sub h-screen flex flex-col justify-center items-center w-full sm:w-1/2 lg:w-1/4 text-center h-full relative">
-          <div className="hero-full__sub-wrapper uppercase text-white sm:mt-24 relative z-10">
-            <div className="hero-full__sub-circle"/>
-            <h2 className="hero-full__sub-title relative text-3xl xl:text-4xl font-light mb-2">ACADEMY</h2>
-            <span className="hero-full__sub-text relative font-light text-sm">Discover</span>
-          </div>
-          <div ref={imageHovers[2]}>
-            <div style={{backgroundImage: `url(${academyImage})`}}  className="hero-full__sub-image bg-image absolute top-0 left-0 w-full h-full opacity-0"/>
-            <div className="hero-full__sub-overlay overlay-bg absolute top-0 left-0 w-full h-full" />
-          </div>
+          <AniLink    
+            cover   
+            top="entry"
+            direction="up"
+            duration={1}
+            bg="#11B3BA" to='/academy'
+          >
+            <div className="hero-full__sub-wrapper uppercase text-white sm:mt-24 relative z-10">
+              <div className="hero-full__sub-circle"/>
+              <h2 className="hero-full__sub-title relative text-3xl xl:text-4xl font-light mb-2">ACADEMY</h2>
+              <span className="hero-full__sub-text relative font-light text-sm">Discover</span>
+            </div>
+            <div ref={imageHovers[2]}>
+              <div style={{backgroundImage: `url(${academyImage})`}}  className="hero-full__sub-image bg-image absolute top-0 left-0 w-full h-full opacity-0"/>
+              <div className="hero-full__sub-overlay overlay-bg absolute top-0 left-0 w-full h-full" />
+            </div>
+          </AniLink>
         </div>
         <div className="hero-full__sub h-screen flex flex-col justify-center items-center w-full sm:w-1/2 lg:w-1/4 text-center h-full relative">
-          <div className="hero-full__sub-wrapper uppercase text-white sm:mt-24 relative z-10">
-            <div className="hero-full__sub-circle"/>
-            <h2 className="hero-full__sub-title relative text-3xl xl:text-4xl font-light mb-2">HAIR</h2>
-            <span className="hero-full__sub-text relative font-light text-sm">Discover</span>
-          </div>
-          <div ref={imageHovers[3]}>
-            <div style={{backgroundImage: `url(${hairImage})`}}  className="hero-full__sub-image bg-image absolute top-0 left-0 w-full h-full opacity-0"/>
-            <div className="hero-full__sub-overlay overlay-bg absolute top-0 left-0 w-full h-full" />
-          </div>
+          <AniLink    
+            cover   
+            top="entry"
+            direction="up"
+            duration={1}
+            bg="#11B3BA" to='#'
+          >
+            <div className="hero-full__sub-wrapper uppercase text-white sm:mt-24 relative z-10">
+              <div className="hero-full__sub-circle"/>
+              <h2 className="hero-full__sub-title relative text-3xl xl:text-4xl font-light mb-2">HAIR</h2>
+              <span className="hero-full__sub-text relative font-light text-sm">Discover</span>
+            </div>
+            <div ref={imageHovers[3]}>
+              <div style={{backgroundImage: `url(${hairImage})`}}  className="hero-full__sub-image bg-image absolute top-0 left-0 w-full h-full opacity-0"/>
+              <div className="hero-full__sub-overlay overlay-bg absolute top-0 left-0 w-full h-full" />
+            </div>
+          </AniLink>
         </div>
       </div>
       <div ref={heroImageEl} style={{backgroundImage: `url(${heroImage})`}} className="bg-image absolute top-0 left-0 w-full h-full" />

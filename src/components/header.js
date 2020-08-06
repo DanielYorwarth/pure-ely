@@ -62,7 +62,7 @@ const Header = ({loaded, logoType}) => {
             </Link>
           </div>
           <div ref={bookBtn} className="hidden md:block w-1/4 text-right">
-              <ButtonBordered text="Book Online" link="#" />
+              <ButtonBordered windowed text="Book Online" link="https://online.premiersoftware.co.uk/Book-Online-3G-V2/index2.php?i=21cea48d674d25790ce2f157548cf742&siteID=2" />
           </div>
           <MenuToggleBtn toggled={toggled} toggleMenu={handleToggleMenu} />
         </div>

@@ -53,6 +53,7 @@ class AestheticsPage extends Component {
             }
           }}
         />
+        {this.state.loaded && <div>
         <TwoColFullScreen cols={[{
             bg: 'text-white bg-primary-darker',
             content: <ServiceInfo 
@@ -220,13 +221,13 @@ class AestheticsPage extends Component {
               title: 'Permanent Make Up',
               text: 'Discover',
               image: permanentBG,
-              link: '#'
+              link: '/aesthetics/permanent-makeup'
             },
             {
               title: 'Medical Tattooing ',
               text: 'Discover',
               image: tattoingBG,
-              link: '#'
+              link: '/aesthetics/medical-tattooing'
             },
           ].map(({title, image, text, link}, i) => (
               <div key={i} className="w-full sm:w-1/2">
@@ -236,6 +237,7 @@ class AestheticsPage extends Component {
         </div>
         <Testimonials />
         <BookCta />
+        </div>}
       </Layout>
     );
   }

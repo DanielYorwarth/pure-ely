@@ -28,19 +28,18 @@ class ServicePage extends Component {
     return (
       <Layout pageType='beauty'>
         <SEO
-          keywords={[`LASER HAIR REMOVAL Ely`]}
-          title="LASER HAIR REMOVAL"
+          keywords={[`Laser Hair Removal Ely`]}
+          title="Laser Hair Removal"
         />
         <SubHero 
           loaded={this.state.loaded}
           bgImage={laserhairBgImage}
           data={{
             title: 'LASER HAIR REMOVAL',
+            subTitle: '*Laser hair removal treatments will need a patch test and consultation where treatment objectives can be discussed before the treatment can take place. See below for pricing.',
             oneCol: <div className="mb-10 md:mb-0" key={1}>
               <p className="font-thin">
-                tetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation tetur adipiscing elit, sed do eiusmod tempor incididunt ut la
-                <br /><br />
-                Laser hair removal treatments will need a patch test and consultation where treatment objectives can be discussed before the treatment can take place. See below for pricing.
+              Permanent and pain free
               </p>
             </div>
           }}
@@ -50,7 +49,7 @@ class ServicePage extends Component {
             {
               bg: 'text-white bg-primary-darker',
               content: <div>
-                <h3 className="text-4xl uppercase mb-5">WOMENS</h3>
+                <h3 className="text-4xl uppercase mb-5">WOMENS <span className="text-sm block">(Prices per session)</span></h3>
                 <div className="flex flex-wrap">
                   <div className="w-full sm:w-1/2">
                     <ListItem text={<span>Upper Lip: <b>£60</b></span>} />
@@ -62,6 +61,7 @@ class ServicePage extends Component {
                     <ListItem text={<span>Lower Arms: <b>£100</b></span>} />
                     <ListItem text={<span>Upper Arms: <b>£100</b></span>} />
                     <ListItem text={<span>Full Arms: <b>£150</b></span>} />
+                    <ListItem text={<span>Breast: <b>£80</b></span>} />
                   </div>
                   <div className="w-full sm:w-1/2">
                     <ListItem text={<span>Underarm: <b>£80</b></span>} />
@@ -73,6 +73,7 @@ class ServicePage extends Component {
                     <ListItem text={<span>Chin: <b>£70</b></span>} />
                     <ListItem text={<span>Neck: <b>£80</b></span>} />
                     <ListItem text={<span>Hands or Feet: <b>£60</b></span>} />
+                    <ListItem text={<span>Hollywood: <b>£200</b></span>} />
                   </div>
                 </div>
               </div>
@@ -80,7 +81,7 @@ class ServicePage extends Component {
             {
               bg: 'bg-white',
               content: <div>
-                <h3 className="text-4xl uppercase mb-5">Mens</h3>
+                <h3 className="text-4xl uppercase mb-5">Mens <span className="text-sm block">(Prices per session)</span></h3>
                 <div className="flex flex-wrap">
                   <div className="w-full sm:w-1/2">
                     <ListItem text={<span>Chest: <b>£130</b></span>} />
@@ -96,6 +97,7 @@ class ServicePage extends Component {
                     <ListItem text={<span>Neck: <b>£80</b></span>} />
                     <ListItem text={<span>Full Beard: <b>£140</b></span>} />
                     <ListItem text={<span>Lower Arms: <b>£100</b></span>} />
+                    <ListItem text={<span>Upper Arms: <b>£100</b></span>} />
                     <ListItem text={<span>Lower Legs: <b>£150</b></span>} />
                     <ListItem text={<span>Upper Legs: <b>£175</b></span>} />
                     <ListItem text={<span>Ears: <b>£55</b></span>} />

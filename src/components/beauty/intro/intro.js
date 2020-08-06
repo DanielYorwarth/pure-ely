@@ -11,8 +11,12 @@ const BeautyIntro = () => {
           <img className="w-full" src={pureSalon} />
         </div>
         <div className="md:pl-16 w-full md:w-3/5">
-          <h3 className="uppercase text-4xl text-primary-dark leading-tight mb-4">Pure Ely is a Beauty and Nail Salon based In Three Cups Walk, Ely.</h3>
-          <p className="font-light">Situated within a beautiful new building with stunning gardens, tucked away from the hustle and bustle of Ely. You can truly enjoy a relaxing and pampering experience for nails, pedi’s, eye treatments and more. Come visit us for your beauty and nails in Ely.</p>
+          <h3 className="uppercase text-4xl text-primary-dark leading-tight mb-4">Pure Ely is a Beauty Salon in the heart of Ely.</h3>
+          <p className="font-light">
+            Our stunning location tucked away behind the Cathedral provides a tranquil and relaxing environment for all your beauty treatments.
+            <br/><br/>
+            Pure Ely Beauty offers a range of treatments from Gel Polish Nails & Toes, Eyelash Extensions, Massage, Spa Pedicures, LVL Lashlift and Dermaplaning.
+          </p>
         </div>
       </div>
     </div>

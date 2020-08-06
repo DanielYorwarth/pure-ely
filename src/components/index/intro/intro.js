@@ -9,7 +9,7 @@ const Intro = () => {
   return (
     <div className="relative px-4">
       <div className="flex flex-wrap justify-center mx-auto max-w-screen-xl mb-10 md:mb-32 text-center">
-        <h1 className="uppercase text-4xl text-primary-dark leading-tight">Welcome to pure ely</h1>
+        <h1 className="uppercase text-4xl text-primary-dark leading-tight">The Pure Ely Story</h1>
       </div>
       <img style={{top: '-8.5%'}} className="absolute hidden lg:block left-0" src={introDots} />
       <div className="flex flex-wrap justify-between items-center mx-auto max-w-5xl mb-16 md:mb-32">
@@ -18,8 +18,8 @@ const Intro = () => {
           <img className="w-full" src={pureSlippers} />
         </div>
         <div className="md:pl-16 w-full md:w-2/3 text-center max-w-2xl mx-auto">
-          <h3 className="uppercase text-4xl text-primary-dark leading-tight mb-4">We love to help people look and feel great</h3>
-          <p className="font-light">Situated within a beautiful new building with stunning gardens, tucked away from the hustle and bustle of Ely. You can truly enjoy a relaxing and pampering experience for nails, pedi’s, eye treatments and more. Come visit us for your beauty and nails in Ely.</p>
+          <h3 className="uppercase text-4xl text-primary-dark leading-tight mb-4"> Pure Ely Beauty, Pure Ely Aesthetics & Training Academy & Pure Ely Hair</h3>
+          <p className="font-light">Pure Ely strives to bring you the latest in Beauty, Hair & Aesthetics treatments.  2020 has seen our second clinic open in Ely where our Aesthetics, Training Academy and Hair Stylists will be based.  Our new training academy will be across both clinics bringing you specially designed courses to enhance your career opportunities under our care and guidance.  The convenience of having all your treatments under one trusted brand.</p>
         </div>
       </div>
     </div>

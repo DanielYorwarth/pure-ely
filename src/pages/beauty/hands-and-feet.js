@@ -37,6 +37,7 @@ class ServicePage extends Component {
           bgImage={handsBgImage}
           data={{
             title: 'HANDS & FEET',
+            subTitle: '(Our Spa Pedicures use state of the art Spa Pedi chairs, with whirlpool & a cheeky glass of a fizz!)',
             twoCol: [
               <div className="font-thin" key={1}>
                 <ListItem text={<span>Gel polish hands or feet: <b className="font-semibold">£30</b></span>} />
@@ -44,6 +45,7 @@ class ServicePage extends Component {
                 <ListItem text={<span>Gel polish and removal from another salon: <b className="font-semibold">£45</b></span>} />
                 <ListItem text={<span>Gel polish and builder gel: <b className="font-semibold">£35</b></span>} />
                 <ListItem text={<span>Dip Powder Extensions: <b className="font-semibold">£45</b></span>} />
+                <ListItem text={<span>Callus Peel <span className="text-sm">(added to mini Pedi)</span>: <b className="font-semibold">£20</b></span>} />
               </div>,
               <div className="font-thin" key={2}>
                 <ListItem text={<span>Dip Powder Rebalance: <b className="font-semibold">£30</b></span>} />
@@ -56,7 +58,7 @@ class ServicePage extends Component {
           }}
         />
         <SubIntro 
-          text={<p>tetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation tetur adipiscing elit, sed do eiusmod tempor incididunt ut la</p>}
+          text={<p>Choose from over 1000 colors from our colour wall display. Whether you are a classic red, or a bright pop of colour with the latest designs and trends, we have got a colour for you.</p>}
         />
         <BookCta />
       </Layout>
