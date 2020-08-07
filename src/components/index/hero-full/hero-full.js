@@ -46,11 +46,10 @@ const HeroFull = ({loaded}) => {
       <div ref={sectorsWrapper} className="flex flex-wrap w-full relative z-10">
         <div className="hero-full__sub  h-screen  flex flex-col justify-center items-center w-full sm:w-1/2 lg:w-1/4 text-center h-full relative">
           <AniLink    
-            cover   
-            top="entry"
-            direction="up"
+            paintDrip   
             duration={1}
-            bg="#11B3BA" to='/beauty'
+            hex="#11B3BA"
+            to='/beauty'
           >
             <div className="hero-full__sub-wrapper uppercase text-white sm:mt-24 relative z-10">
               <div className="hero-full__sub-circle"/>
@@ -65,11 +64,10 @@ const HeroFull = ({loaded}) => {
         </div>
         <div className="hero-full__sub h-screen flex flex-col justify-center items-center w-full sm:w-1/2 lg:w-1/4 text-center h-full relative">
           <AniLink    
-            cover   
-            top="entry"
-            direction="up"
+            paintDrip   
             duration={1}
-            bg="#11B3BA" to='/aesthetics'
+            hex="#11B3BA"
+            to='/aesthetics'
           >
             <div className="hero-full__sub-wrapper uppercase text-white sm:mt-24 relative z-10">
               <div className="hero-full__sub-circle"/>
@@ -84,11 +82,10 @@ const HeroFull = ({loaded}) => {
         </div>
         <div className="hero-full__sub h-screen flex flex-col justify-center items-center w-full sm:w-1/2 lg:w-1/4 text-center h-full relative">
           <AniLink    
-            cover   
-            top="entry"
-            direction="up"
+            paintDrip   
             duration={1}
-            bg="#11B3BA" to='/academy'
+            hex="#11B3BA"
+            to='/academy'
           >
             <div className="hero-full__sub-wrapper uppercase text-white sm:mt-24 relative z-10">
               <div className="hero-full__sub-circle"/>
@@ -103,11 +100,10 @@ const HeroFull = ({loaded}) => {
         </div>
         <div className="hero-full__sub h-screen flex flex-col justify-center items-center w-full sm:w-1/2 lg:w-1/4 text-center h-full relative">
           <AniLink    
-            cover   
-            top="entry"
-            direction="up"
+            paintDrip   
             duration={1}
-            bg="#11B3BA" to='#'
+            hex="#11B3BA"
+            to='#'
           >
             <div className="hero-full__sub-wrapper uppercase text-white sm:mt-24 relative z-10">
               <div className="hero-full__sub-circle"/>
