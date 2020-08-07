@@ -13,11 +13,16 @@ class ServicePage extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      loaded: false  
+      loaded: false
     }
   }
   componentDidMount() {
-    this.setState(() => ({loaded: true}))
+    const img = new Image();
+    img.src = purefacialsBgImage; // by setting an src, you trigger browser download
+    img.onload = () => {
+      // when it finishes loading, update the component state
+      this.setState(() => ({loaded: true}))
+    }
   }
   componentWillUnmount() {
     if (this.timeoutId) clearTimeout(this.timeoutId);
