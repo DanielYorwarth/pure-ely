@@ -8,7 +8,7 @@ import ListItem from '../../components/elements/list-item/list-item';
 import SubIntro from '../../components/elements/sub-intro/sub-intro';
 import BookCta from '../../components/elements/book-cta/book-cta';
 
-import handsBgImage from '../../images/hands-bg.jpg';
+import handsBgImage from '../../images/massage-bg.jpg';
 
 class ServicePage extends Component {
   constructor(props) {

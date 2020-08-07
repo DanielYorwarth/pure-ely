@@ -15,7 +15,9 @@ import massageImage from '../images/massage.jpg';
 import waxingImages from '../images/waxing.jpg';
 import eyeTreatmentImage from '../images/eye-treatments-and-extentions.jpg';
 import laserHairImage from '../images/laser-hair-removal.jpg';
-import iplTreatmentImage from '../images/IPL-treatments.jpg';
+import plasmaImage from '../images/plasma-cta.jpg';
+import facialsImage from '../images/facials-cta.jpg';
+import otherImage from '../images/other-treatments-cta.jpg';
 
 class IndexPage extends React.Component {
   constructor(props) {
@@ -41,7 +43,7 @@ class IndexPage extends React.Component {
         <HeroFull loaded={this.state.loaded} />
         <Intro />
         <ServiceList height="45" services={[
-          {
+         {
             title: 'Hands & Feet',
             text: 'Discover',
             image: feetHandsImage,
@@ -74,21 +76,21 @@ class IndexPage extends React.Component {
           {
             title: 'Plasma Technology',
             text: 'Discover',
-            image: iplTreatmentImage,
+            image: plasmaImage,
             link: '/beauty/plasma-technology'
           }
           ,
           {
             title: 'Pure Facials',
             text: 'Discover',
-            image: iplTreatmentImage,
+            image: facialsImage,
             link: '/beauty/pure-facials'
           }
           ,
           {
             title: 'Other Treatments',
             text: 'Discover',
-            image: iplTreatmentImage,
+            image: otherImage,
             link: '/beauty/other-treatments'
           }
         ]}/>

@@ -1,5 +1,5 @@
 import React, {useRef, useEffect} from "react";
-import { Link } from "gatsby";
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import PropTypes from "prop-types";
 import {TimelineLite, Expo} from 'gsap';
 
@@ -50,12 +50,17 @@ const MobileMainNav = ({menu, toggled}) => {
       <div ref={mobileList} className="text-center mb-2">
         {menu.map((link) => (
           <div key={link.title} className="md:px-6">
-            <Link
+            <AniLink
+              cover   
+              top="entry"
+              direction="up"
+              duration={1.2}
+              bg="#11B3BA"
               className="mainnav__item block text-white no-underline md:inline-block uppercase mb-4 text-xl"
               to={link.route}
             >
               {link.title}
-            </Link>
+            </AniLink>
             </div>
         ))}
       </div>

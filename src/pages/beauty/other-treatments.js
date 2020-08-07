@@ -7,7 +7,7 @@ import SubHero from '../../components/elements/sub-hero/sub-hero';
 import ListItem from '../../components/elements/list-item/list-item';
 import BookCta from '../../components/elements/book-cta/book-cta';
 
-import handsBgImage from '../../images/hands-bg.jpg';
+import handsBgImage from '../../images/other-treatments-bg.jpg';
 
 class ServicePage extends Component {
   constructor(props) {

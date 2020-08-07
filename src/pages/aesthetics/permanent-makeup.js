@@ -30,8 +30,8 @@ class ServicePage extends Component {
     return (
       <Layout pageType='aesthetics'>
         <SEO
-          keywords={[`Permanent Make Up Ely`, `Permanent Eyeliner Ely`, `Permanent Lips Ely`, `Permanent cosmetics Ely`]}
-          title="Permanent Make Up"
+          keywords={[`Permanent Makeup Ely`, `Permanent Eyeliner Ely`, `Permanent Lips Ely`, `Permanent cosmetics Ely`]}
+          title="Permanent Makeup"
         />
         <SubHero 
           marginBottom
