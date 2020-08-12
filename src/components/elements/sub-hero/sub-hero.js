@@ -28,7 +28,7 @@ const SubFull = ({loaded, bgImage, marginBottom, data}) => {
       <div className="flex flex-wrap w-full relative z-10">
         <div className="min-h-screen flex flex-col justify-center max-w-screen-xl py-2 px-4 w-full mx-auto h-full relative sm:mt-24">
           <div ref={textWrapper} className="text-white mt-32 md:mt-48 pb-8 relative z-10">
-          <div className="sub-hero__circle"/>
+            <div className="sub-hero__circle"/>
             {data.title && <h2 className="uppercase relative text-3xl md:text-4xl lg:text-5xl font-light max-w-4xl">{data.title}</h2>}
             {data.subTitle && <p className="font-thin leading-relaxed max-w-lg">{data.subTitle}</p>}
             {data.fourCol &&

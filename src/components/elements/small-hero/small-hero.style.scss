@@ -1,0 +1,21 @@
+.small-hero {
+  margin-top: -217px;
+  &__circle {
+    transition: 0.3s;
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    left: -15px;
+    border-radius: 50%;
+    top: -5px;
+    background-color: #11B3BA;
+    z-index: -1;
+  }
+}
+
+
+@media only screen and (max-width: 639px) {
+  .small-hero {
+    margin-top: -75px;
+  }
+}

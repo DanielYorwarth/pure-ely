@@ -58,7 +58,7 @@ const MainNav = ({menu = [
     sub: [
       {
         route: `/aesthetics`,
-        title: `Overview`,
+        title: `Aesthetics`,
       },
       {
         route: `/aesthetics/permanent-makeup`,
@@ -81,9 +81,15 @@ const MainNav = ({menu = [
   {
     route: `#`,
     title: `About`,
+    sub: [
+      {
+        route: `/about/finance`,
+        title: `Finance`,
+      },
+    ]
   },
   {
-    route: `#`,
+    route: `/contact`,
     title: `Contact`,
   }
 ], toggled, loaded}) => {
