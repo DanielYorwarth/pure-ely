@@ -43,6 +43,11 @@ class ServicePage extends Component {
           </div>
           <div className="w-full md:w-1/2 lg:w-1/4 mb-10 lg:mb-0 ">
             <h3 className="text-primary text-4xl uppercase font-light leading-tight mb-4">Contact Information</h3>
+            <h3 className="text-primary text-2xl uppercase font-light leading-tight mb-4">Hair</h3>
+            <p className="text-primary-dark font-bold mb-4">1 High Street Passage, <br/>
+            Ely <br/>
+            United Kingdom </p>
+            <h3 className="text-primary text-2xl uppercase font-light leading-tight mb-4">Beauty</h3>
             <p className="text-primary-dark font-bold mb-4">4-8 Three Cups Walk, <br/>
             Ely, CB7 4AN <br/>
             United Kingdom </p>
