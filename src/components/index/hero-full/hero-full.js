@@ -103,7 +103,7 @@ const HeroFull = ({loaded}) => {
             paintDrip   
             duration={1}
             hex="#11B3BA"
-            to='#'
+            to='/hair'
           >
             <div className="hero-full__sub-wrapper uppercase text-white sm:mt-24 relative z-10">
               <div className="hero-full__sub-circle"/>

@@ -43,6 +43,14 @@ const Header = ({loaded, logoType}) => {
       United Kingdom 
       </p>
       break;
+    case 'hair':
+      logoImage = mainLogo
+      addressText = <p className="text-white text-xs text-right mt-4">
+      1 High st Passage, <br/>
+      Ely,  CB7 4NB <br/>
+      United Kingdom 
+      </p>
+      break;
     default:
       logoImage = mainLogo
       addressText = null

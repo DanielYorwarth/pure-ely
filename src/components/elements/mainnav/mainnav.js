@@ -75,11 +75,11 @@ const MainNav = ({menu = [
     title: `Academy`,
   },
   {
-    route: `#`,
+    route: `/hair`,
     title: `Hair`,
   },
   {
-    route: `#`,
+    route: `/about`,
     title: `About`,
     sub: [
       {
