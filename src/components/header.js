@@ -17,18 +17,35 @@ import mobileLogo from "../images/header-icon.svg";
 
 const Header = ({loaded, logoType}) => {
   let logoImage 
+  let addressText 
   switch (logoType) {
     case 'beauty':
       logoImage = beautyLogo
+      addressText = <p className="text-white text-xs text-right mt-4">
+      4-8 Three Cups Walk, <br/>
+      Ely, CB7 4AN <br/>
+      United Kingdom 
+      </p>
       break;
     case 'aesthetics':
       logoImage = aestheticsLogo
+      addressText = <p className="text-white text-xs text-right mt-4">
+      1 High st Passage, <br/>
+      Ely,  CB7 4NB <br/>
+      United Kingdom 
+      </p>
       break;
     case 'academy':
       logoImage = academyLogo
+      addressText = <p className="text-white text-xs text-right mt-4">
+      1 High st Passage, <br/>
+      Ely,  CB7 4NB <br/>
+      United Kingdom 
+      </p>
       break;
     default:
       logoImage = mainLogo
+      addressText = null
       break;
   }
   const logo = useRef(null);
@@ -63,6 +80,9 @@ const Header = ({loaded, logoType}) => {
           </div>
           <div ref={bookBtn} className="hidden md:block w-1/4 text-right">
               <ButtonBordered windowed text="Book Online" link="https://online.premiersoftware.co.uk/Book-Online-3G-V2/index2.php?i=21cea48d674d25790ce2f157548cf742&siteID=2" />
+                {
+                  addressText && addressText
+                }
           </div>
           <MenuToggleBtn toggled={toggled} toggleMenu={handleToggleMenu} />
         </div>
