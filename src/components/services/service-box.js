@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import BackgroundImage from 'gatsby-background-image'
 
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
@@ -9,9 +10,10 @@ const ServiceBox = ({service, height}) => {
   return (
     <AniLink  
       paintDrip   
-      duration={1}
+      duration={1.2}
       hex="#11B3BA"
       to={service.link}
+      rel="preload" as="image" href={service.image}
     >
       <div className={`service-box service-box--${height} text-center relative flex flex-wrap items-center justify-center`}>
         <div className="z-10 relative">
@@ -19,7 +21,12 @@ const ServiceBox = ({service, height}) => {
           <span className="service-box__text relative text-white">{service.text}</span>
           <div className="service-box__circle absolute" />
         </div>
-        <div style={{backgroundImage: `url(${service.image})`}} className="service-box__image bg-image absolute top-0 left-0 w-full h-full" />
+        <BackgroundImage
+          Tag="section"
+          fluid={service.image}
+          className="service-box__image bg-image top-0 left-0 w-full h-full"
+        >
+        </BackgroundImage>
         <div className="service-box__overlay overlay-bg absolute top-0 left-0 w-full h-full" />
       </div>
     </AniLink>

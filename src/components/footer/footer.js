@@ -51,11 +51,9 @@ const Footer = () => {
             ].map(menuItem => (
               <li className="pr-8 uppercase mb-2 md:mb-0" key={menuItem.title}>
                 <AniLink 
-                  cover   
-                  top="entry"
-                  direction="up"
+                  paintDrip   
                   duration={1.2}
-                  bg="#11B3BA" 
+                  hex="#11B3BA" 
                   to={menuItem.route}>
                   {menuItem.title}
                 </AniLink>

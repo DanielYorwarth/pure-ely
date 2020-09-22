@@ -1,11 +1,12 @@
 import React from "react";
+import PropTypes from "prop-types";
+import Img from "gatsby-image";
 
 import introDots from '../../../images/intro-dots.svg';
-import pureSlippers from '../../../images/pure-ely-beauty-salon-slippers.jpg';
 
 import './intro.style.scss';
 
-const Intro = () => {
+const Intro = ({image}) => {
   return (
     <div className="relative px-4">
       <div className="flex flex-wrap justify-center mx-auto max-w-screen-xl mb-10 md:mb-32 text-center">
@@ -15,7 +16,7 @@ const Intro = () => {
       <div className="flex flex-wrap justify-between items-center mx-auto max-w-5xl mb-16 md:mb-32">
         <div className="blue-strip hidden md:block absolute w-full h-full bg-primary" />
         <div className=" w-full md:w-1/3 mb-5 md:mb-0">
-          <img className="w-full" src={pureSlippers} />
+          {image &&<Img className="w-full" fluid={image} />}
         </div>
         <div className="md:pl-16 w-full md:w-2/3 text-center max-w-2xl mx-auto">
           <h3 className="uppercase text-4xl text-primary-dark leading-tight mb-4"> Pure Ely Beauty, Pure Ely Aesthetics & Training Academy & Pure Ely Hair</h3>
@@ -25,4 +26,11 @@ const Intro = () => {
     </div>
   );
 }
+
+
+Intro.propTypes = {
+  image: PropTypes.object,
+};
+
+
 export default Intro;

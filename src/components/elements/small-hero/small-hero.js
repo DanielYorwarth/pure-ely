@@ -1,7 +1,7 @@
 import React, {useRef, useEffect} from "react";
 import PropTypes from "prop-types";
+import BackgroundImage from 'gatsby-background-image'
 
-import { Parallax } from 'react-parallax';
 import gsap, {Power3} from 'gsap';
 
 import './small-hero.style.scss';
@@ -19,10 +19,9 @@ const SmallHero = ({loaded, bgImage, marginBottom, title}) => {
 
   return (
     <div ref={heroImageEl} className={`small-hero relative flex flex-wrap w-full ${marginBottom && 'mb-16 md:mb-32'}`}>
-     <Parallax
-      strength={400}
-      bgClassName="max-w-none	"
-      bgImage={bgImage}
+     <BackgroundImage
+      Tag="div"
+      fluid={bgImage}
       className="w-full"
     >
       <div className="flex flex-wrap w-full relative z-10">
@@ -34,7 +33,7 @@ const SmallHero = ({loaded, bgImage, marginBottom, title}) => {
         </div>
       </div>
       <div className="overlay-bg absolute top-0 left-0 w-full h-full" />
-      </Parallax>
+      </BackgroundImage>
     </div>
   );
 }
@@ -42,7 +41,7 @@ const SmallHero = ({loaded, bgImage, marginBottom, title}) => {
 
 SmallHero.propTypes = {
   loaded: PropTypes.bool,
-  bgImage: PropTypes.string,
+  bgImage: PropTypes.object,
   marginBottom: PropTypes.bool,
   title: PropTypes.string
 };

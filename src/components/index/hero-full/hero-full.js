@@ -1,18 +1,13 @@
 import React, {useRef, useEffect} from "react";
 import PropTypes from "prop-types";
 import AniLink from "gatsby-plugin-transition-link/AniLink"
+import BackgroundImage from 'gatsby-background-image'
 
 import gsap, {Power3} from 'gsap';
 
 import './hero-full.style.scss';
 
-import heroImage from '../../../images/main-bg.jpg';
-import beautyImage from '../../../images/pure-ely-beauty-hoverover.jpg';
-import aestheticsImage from '../../../images/pure-ely-Aesthetics-hoverover.jpg';
-import academyImage from '../../../images/pure-ely-academy-hoverover.jpg';
-import hairImage  from '../../../images/pure-ely-hair-hoverover.jpg';
-
-const HeroFull = ({loaded}) => {
+const HeroFull = ({loaded, herofull, hero1, hero2, hero3, hero4}) => {
   let heroImageEl = useRef(null);
   let sectorsWrapper = useRef(null);
   let imageHovers = [
@@ -47,7 +42,7 @@ const HeroFull = ({loaded}) => {
         <div className="hero-full__sub  h-screen  flex flex-col justify-center items-center w-full sm:w-1/2 lg:w-1/4 text-center h-full relative">
           <AniLink    
             paintDrip   
-            duration={1}
+            duration={1.2}
             hex="#11B3BA"
             to='/beauty'
           >
@@ -57,15 +52,19 @@ const HeroFull = ({loaded}) => {
               <span className="hero-full__sub-text relative font-light text-sm">Discover</span>
             </div>
             <div ref={imageHovers[0]}>
-              <div style={{backgroundImage: `url(${beautyImage})`}}  className="hero-full__sub-image bg-image absolute top-0 left-0 w-full h-full opacity-0"/>
-              <div className="hero-full__sub-overlay overlay-bg absolute top-0 left-0 w-full h-full" />
+              <BackgroundImage
+                Tag="div"
+                fluid={hero1}
+                className="hero-full__sub-image bg-image inset-0 opacity-0"
+              />
+              <div className="hero-full__sub-overlay overlay-bg absolute inset-0" />
             </div>
           </AniLink>
         </div>
         <div className="hero-full__sub h-screen flex flex-col justify-center items-center w-full sm:w-1/2 lg:w-1/4 text-center h-full relative">
           <AniLink    
             paintDrip   
-            duration={1}
+            duration={1.2}
             hex="#11B3BA"
             to='/aesthetics'
           >
@@ -75,15 +74,19 @@ const HeroFull = ({loaded}) => {
               <span className="hero-full__sub-text relative font-light text-sm">Discover</span>
             </div>
             <div ref={imageHovers[1]}>
-              <div style={{backgroundImage: `url(${aestheticsImage})`}}  className="hero-full__sub-image bg-image absolute top-0 left-0 w-full h-full opacity-0"/>
-              <div className="hero-full__sub-overlay overlay-bg absolute top-0 left-0 w-full h-full" />
+              <BackgroundImage
+                Tag="div"
+                fluid={hero2}
+                className="hero-full__sub-image bg-image inset-0 opacity-0"
+              />
+              <div className="hero-full__sub-overlay overlay-bg absolute inset-0" />
             </div>
           </AniLink>
         </div>
         <div className="hero-full__sub h-screen flex flex-col justify-center items-center w-full sm:w-1/2 lg:w-1/4 text-center h-full relative">
           <AniLink    
             paintDrip   
-            duration={1}
+            duration={1.2}
             hex="#11B3BA"
             to='/academy'
           >
@@ -93,15 +96,19 @@ const HeroFull = ({loaded}) => {
               <span className="hero-full__sub-text relative font-light text-sm">Discover</span>
             </div>
             <div ref={imageHovers[2]}>
-              <div style={{backgroundImage: `url(${academyImage})`}}  className="hero-full__sub-image bg-image absolute top-0 left-0 w-full h-full opacity-0"/>
-              <div className="hero-full__sub-overlay overlay-bg absolute top-0 left-0 w-full h-full" />
+              <BackgroundImage
+                Tag="div"
+                fluid={hero3}
+                className="hero-full__sub-image bg-image inset-0 opacity-0"
+              />
+              <div className="hero-full__sub-overlay overlay-bg absolute inset-0" />
             </div>
           </AniLink>
         </div>
         <div className="hero-full__sub h-screen flex flex-col justify-center items-center w-full sm:w-1/2 lg:w-1/4 text-center h-full relative">
           <AniLink    
             paintDrip   
-            duration={1}
+            duration={1.2}
             hex="#11B3BA"
             to='/hair'
           >
@@ -111,13 +118,23 @@ const HeroFull = ({loaded}) => {
               <span className="hero-full__sub-text relative font-light text-sm">Discover</span>
             </div>
             <div ref={imageHovers[3]}>
-              <div style={{backgroundImage: `url(${hairImage})`}}  className="hero-full__sub-image bg-image absolute top-0 left-0 w-full h-full opacity-0"/>
-              <div className="hero-full__sub-overlay overlay-bg absolute top-0 left-0 w-full h-full" />
+              <BackgroundImage
+                Tag="div"
+                fluid={hero4}
+                className="hero-full__sub-image bg-image inset-0 opacity-0"
+              />
+              <div className="hero-full__sub-overlay overlay-bg absolute inset-0" />
             </div>
           </AniLink>
         </div>
       </div>
-      <div ref={heroImageEl} style={{backgroundImage: `url(${heroImage})`}} className="bg-image absolute top-0 left-0 w-full h-full" />
+      <div ref={heroImageEl} className="absolute inset-0" >
+        <BackgroundImage
+          Tag="div"
+          fluid={herofull}
+          className="realtive bg-image w-full h-full"
+        />
+      </div>
       <div className="overlay-bg absolute top-0 left-0 w-full h-full" />
     </div>
   );
@@ -125,6 +142,12 @@ const HeroFull = ({loaded}) => {
 
 HeroFull.propTypes = {
   loaded: PropTypes.bool,
+  herofull: PropTypes.object,
+  hero1: PropTypes.object,
+  hero2: PropTypes.object,
+  hero3: PropTypes.object,
+  hero4: PropTypes.object,
+
 };
 
 export default HeroFull;

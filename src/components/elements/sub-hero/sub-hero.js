@@ -1,7 +1,7 @@
 import React, {useRef, useEffect} from "react";
 import PropTypes from "prop-types";
+import BackgroundImage from 'gatsby-background-image'
 
-import { Parallax } from 'react-parallax';
 import gsap, {Power3} from 'gsap';
 
 import './sub-hero.style.scss';
@@ -18,11 +18,10 @@ const SubFull = ({loaded, bgImage, marginBottom, data}) => {
   }, [loaded]);
 
   return (
-    <div ref={heroImageEl} className={`sub-hero relative flex flex-wrap w-full ${marginBottom && 'mb-16 md:mb-32'}`}>
-     <Parallax
-      strength={400}
-      bgClassName="max-w-none	"
-      bgImage={bgImage}
+    <section ref={heroImageEl} className={`sub-hero relative flex flex-wrap w-full ${marginBottom && 'mb-16 md:mb-32'}`}>
+     <BackgroundImage
+      Tag="div"
+      fluid={bgImage}
       className="w-full"
     >
       <div className="flex flex-wrap w-full relative z-10">
@@ -72,15 +71,15 @@ const SubFull = ({loaded, bgImage, marginBottom, data}) => {
         </div>
       </div>
       <div className="overlay-bg absolute top-0 left-0 w-full h-full" />
-      </Parallax>
-    </div>
+      </BackgroundImage>
+    </section>
   );
 }
 
 
 SubFull.propTypes = {
   loaded: PropTypes.bool,
-  bgImage: PropTypes.string,
+  bgImage: PropTypes.object,
   marginBottom: PropTypes.bool,
   data: PropTypes.object
 };

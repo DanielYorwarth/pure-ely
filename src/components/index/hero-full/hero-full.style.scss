@@ -42,6 +42,10 @@
     &-image, &-overlay {
       transition: 0.8s;
     }
+    &-image {
+      position: absolute !important;
+      opacity: 0 !important;
+    }
     &:hover {
       .hero-full {
         &__sub {
@@ -56,7 +60,7 @@
           }
           &-image {
             transform: scale(1.05);
-            opacity: 1;
+            opacity: 1 !important;
           }
           &-overlay {
             opacity: 0.4;

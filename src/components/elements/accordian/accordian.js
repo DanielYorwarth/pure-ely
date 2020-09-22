@@ -31,7 +31,7 @@ const Accordian = ({questions}) => {
         <div key={i}>
           <button className="accordion bg-primary mb-2">{question.title}</button>
           <div className="panel bg-primary-dark text-left p-4 md:p-8 mb-2">
-            <p>{question.text}</p>
+            <div>{question.text}</div>
           </div>
         </div>
       ))}

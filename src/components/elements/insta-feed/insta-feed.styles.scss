@@ -1,0 +1,23 @@
+.instaimage {
+    height: 15vw;
+    @media (max-width: 1279px) {
+        height: 30vw;
+    }
+    @media (max-width: 767px) {
+        height: 50vw;
+    }
+    &__text {
+        transform: translateY(10px);
+    }
+    &:hover {
+        .instaimage {
+            &__text {
+                opacity: 1;
+                transform: translateY(0px);
+            }
+            &__bg {
+                opacity: 0.75;
+            }
+        }
+    }
+}

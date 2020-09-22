@@ -16,6 +16,9 @@
     transform: translate(-50%, -50%);
     opacity: 0;
   }
+  &__image { 
+    position: absolute !important;
+  }
   &__circle {
     transform: scale(0.5);
     transition: 0.3s;

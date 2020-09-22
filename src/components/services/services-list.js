@@ -7,12 +7,11 @@ import './services-list.style.scss'
 
 import servicesDots from '../../images/services-dots.png';
 
-const ServiceList = ({services, height}) => {
+const ServiceList = ({services, height, title}) => {
   return (
     <div className="relative">
       <div className="w-full">
-        <h3 className="uppercase max-w-screen-xl mx-auto text-4xl text-primary-dark leading-tight mb-8 px-4 md:px-4">Pamper yourself with some <br />
-        of our wide variety of treatments.</h3>
+        {title && <h3 className="uppercase max-w-screen-xl mx-auto text-4xl text-primary-dark leading-tight mb-8 px-4 md:px-4" dangerouslySetInnerHTML={{__html: title}} />}
         <div className="flex flex-wrap">
         {services.map(({title, image, text, link}, i) => (
           <div key={i} className="w-full sm:w-1/2 md:w-1/4">
@@ -28,7 +27,8 @@ const ServiceList = ({services, height}) => {
 
 ServiceList.propTypes = {
   services: PropTypes.array,
-  height: PropTypes.string
+  height: PropTypes.string,
+  title: PropTypes.string
 };
 
 

@@ -119,11 +119,9 @@ const MainNav = ({menu = [
         {menu.map((link) => (
           <div key={link.title} className="md:px-6 relative mainnav__itemwrapper">
             <AniLink
-              cover   
-              top="entry"
-              direction="up"
-              duration={1.2}
-              bg="#11B3BA"
+               paintDrip   
+      duration={1.2}
+      hex="#11B3BA"
               className="mainnav__item block text-white no-underline md:inline-block uppercase text-sm"
               to={link.route}
             >
@@ -132,11 +130,9 @@ const MainNav = ({menu = [
             {link.sub && <div className="mainnav__sub py-4">{link.sub.map(link => (
               <div key={link.title} className="md:px-6 mb-2">
                 <AniLink
-                  cover   
-                  top="entry"
-                  direction="up"
-                  duration={1.2}
-                  bg="#11B3BA"
+                    paintDrip   
+                    duration={1.2}
+                    hex="#11B3BA"
                   className="mainnav__item block text-white no-underline md:inline-block uppercase text-sm"
                   to={link.route}
                 >

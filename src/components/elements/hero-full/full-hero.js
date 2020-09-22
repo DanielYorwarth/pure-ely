@@ -1,14 +1,12 @@
 import React, {useRef, useEffect} from "react";
 import PropTypes from "prop-types";
+import BackgroundImage from 'gatsby-background-image'
 
-import { Parallax } from 'react-parallax';
 import gsap, {Power3} from 'gsap';
-
-import beautyImage from '../../../images/beauty-bg.jpg';
 
 import './hero-full.style.scss';
 
-const HeroFull = ({loaded}) => {
+const HeroFull = ({loaded, image}) => {
 
   let heroImageEl = useRef(null);
   let textWrapper = useRef(null);
@@ -21,12 +19,9 @@ const HeroFull = ({loaded}) => {
 
   return (
     <div ref={heroImageEl} className="subhero-full flex flex-wrap w-full mb-10 md:mb-32">
-     <Parallax
-      blur={0}
-      bgImage={beautyImage}
-      bgClassName="max-w-none"
-      bgImageAlt="bg-image"
-      strength={400}
+     <BackgroundImage
+      Tag="div"
+      fluid={image}
       className="w-full"
     >
       <div className="flex flex-wrap w-full relative z-10 px-4 md:px-4">
@@ -40,7 +35,7 @@ Pop in for a gel polish manicure or relax with a friend in our state-of-the-art 
         </div>
       </div>
       <div className="overlay-bg absolute top-0 left-0 w-full h-full" />
-      </Parallax>
+      </BackgroundImage>
     </div>
   );
 }
@@ -48,6 +43,7 @@ Pop in for a gel polish manicure or relax with a friend in our state-of-the-art 
 
 HeroFull.propTypes = {
   loaded: PropTypes.bool,
+  image: PropTypes.object,
 };
 
 export default HeroFull;

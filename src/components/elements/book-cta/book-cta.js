@@ -1,4 +1,5 @@
 import React from 'react';
+import { graphql, StaticQuery } from "gatsby"
 import PropTypes from 'prop-types';
 import { Parallax } from 'react-parallax';
 
@@ -6,13 +7,11 @@ import ButtonBordered from '../button-bordered/button-bordered'
 
 import './book-cta-style.scss';
 
-import bookBGImage from '../../../images/booking-bg.jpg';
-
-const BookCta = ({marginBottom}) => (
+const BookCta = ({marginBottom, data}) => (
   <div className={`${marginBottom && 'mb-10 md:mb-16'}`}>
     <Parallax
       blur={5}
-      bgImage={bookBGImage}
+      bgImage={data.bg.childImageSharp.fluid.src}
       bgImageAlt="Book Online"
       strength={300}
     >
@@ -32,7 +31,30 @@ const BookCta = ({marginBottom}) => (
 );
 
 BookCta.propTypes = {
+  data: PropTypes.object,
   marginBottom: PropTypes.bool
 }
 
-export default BookCta;
+const indexQuery = graphql`
+  query {
+    bg: file(relativePath: { eq: "booking-bg.jpg" }) {
+      childImageSharp {
+        fluid(quality: 100, maxWidth: 1920) {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
+  }
+`
+const BookCtaComponent = props => (
+  <StaticQuery
+    query={indexQuery}
+    render={data => (
+      <BookCta props data={data} {...props} />
+    )}
+  />
+)
+
+BookCtaComponent.displayName = "BookCtaComponent"
+
+export default BookCtaComponent

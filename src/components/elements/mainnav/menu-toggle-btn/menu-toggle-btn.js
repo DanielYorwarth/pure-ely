@@ -1,12 +1,20 @@
-import React from 'react';
+import React, {useState} from 'react';
 import PropTypes from "prop-types";
 
 import './menu-toggle-btn.style.scss';
 
 const MenuToggleBtn = ({toggled, toggleMenu}) => {
+  let [isToggling, setIsToggling] = useState(false)
 
   const handleClick = () => {
-    toggleMenu()
+    if (!isToggling) {
+      console.log(isToggling)
+      toggleMenu()
+      setIsToggling(true)
+      setTimeout(() => {
+        setIsToggling(false)
+      }, 1800)
+    } 
   }
 
   const toggleText = toggled ? 'BACK' : 'MENU'

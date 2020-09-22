@@ -86,7 +86,7 @@ const Header = ({loaded, logoType}) => {
               <img className="w-16 md:hidden" src={mobileLogo} />
             </Link>
           </div>
-          <div ref={bookBtn} className="hidden md:block w-1/4 text-right">
+          <div ref={bookBtn} className={`hidden md:block w-1/4 text-right ${addressText && 'md:mt-16'}`}>
               <ButtonBordered windowed text="Book Online" link="https://online.premiersoftware.co.uk/Book-Online-3G-V2/index2.php?i=21cea48d674d25790ce2f157548cf742&siteID=2" />
                 {
                   addressText && addressText
