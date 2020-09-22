@@ -11,7 +11,7 @@ import ButtonBordered from '../components/elements/button-bordered/button-border
 
 const AcademyPage = ({ data }) => {
   
-  let [loaded, setLoaded] = useState(false)
+  let [loaded, setLoaded] = useState(true)
 
   useEffect(() => {
     setLoaded(true)

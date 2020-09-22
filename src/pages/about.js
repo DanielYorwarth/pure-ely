@@ -10,8 +10,8 @@ import BookCta from '../components/elements/book-cta/book-cta';
 import SubIntro from '../components/elements/sub-intro/sub-intro';
 
 const AboutPage = ({ data }) => {
-  
-  let [loaded, setLoaded] = useState(false)
+
+  let [loaded, setLoaded] = useState(true)
 
   useEffect(() => {
     setLoaded(true)

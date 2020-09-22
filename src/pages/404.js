@@ -10,7 +10,7 @@ import SubHero from '../components/elements/sub-hero/sub-hero';
 
 const FourZeroFourPage = ({ data }) => {
   
-  let [loaded, setLoaded] = useState(false)
+  let [loaded, setLoaded] = useState(true)
 
   useEffect(() => {
     setLoaded(true)

@@ -82,8 +82,8 @@ const Header = ({loaded, logoType}) => {
           </div>
           <div className="flex md:flex-1 flex-wrap flex-col items-center">
             <Link className="md:mb-8" to="/">
-              <img ref={logo} className="hidden md:block" src={logoImage} />
-              <img className="w-16 md:hidden" src={mobileLogo} />
+              <img ref={logo} className="hidden md:block" alt="logo" src={logoImage} />
+              <img className="w-16 md:hidden" alt="logo" src={mobileLogo} />
             </Link>
           </div>
           <div ref={bookBtn} className={`hidden md:block w-1/4 text-right ${addressText && 'md:mt-16'}`}>

@@ -14,7 +14,7 @@ import phoneIcon from '../images/phone.svg';
 
 const ContactPage = ({ data }) => {
 
-  let [loaded, setLoaded] = useState(false)
+  let [loaded, setLoaded] = useState(true)
 
   useEffect(() => {
     setLoaded(true)

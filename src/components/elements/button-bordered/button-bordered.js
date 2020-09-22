@@ -5,7 +5,7 @@ import './bordered-btn.style.scss'
 
 const ButtonBordered = ({text, link, windowed}) => {
   return (
-    <a target={windowed && '_blank'} className="bordered-btn uppercase text-white text-sm px-3 py-2" href={link}>
+    <a target={windowed && '_blank'} className="bordered-btn uppercase text-white text-sm px-3 py-2" href={link} rel="noreferrer" >
       <span className="z-10 relative bordered-btn__text">{text}</span>
     </a>
   );

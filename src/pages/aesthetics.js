@@ -17,7 +17,7 @@ import InstaFeed from '../components/elements/insta-feed/insta-feed';
 
 const AestheticsPage = ({ data }) => {
 
-  let [loaded, setLoaded] = useState(false)
+  let [loaded, setLoaded] = useState(true)
 
   useEffect(() => {
     setLoaded(true)
