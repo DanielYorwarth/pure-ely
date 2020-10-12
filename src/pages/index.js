@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { graphql, StaticQuery } from "gatsby"
-import PropTypes from "prop-types";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -13,103 +12,99 @@ import BookCta from '../components/elements/book-cta/book-cta';
 import InstaFeed from '../components/elements/insta-feed/insta-feed';
 
 
-
-const IndexPage = ({ data }) => {
+const IndexPage = () => {
   
   let [loaded, setLoaded] = useState(true)
 
   useEffect(() => {
     setLoaded(true)
   }, [])
-
-  const serviceList = [
-    {
-      title: 'Hands & Feet',
-      text: 'Discover',
-      image: data.hands.childImageSharp.fluid,
-      link: '/beauty/hands-and-feet'
-    },
-    {
-      title: 'Massage',
-      text: 'Discover',
-      image: data.massage.childImageSharp.fluid,
-      link: '/beauty/massage'
-    },
-    {
-      title: 'Waxing',
-      text: 'Discover',
-      image: data.waxing.childImageSharp.fluid,
-      link: '/beauty/waxing'
-    },
-    {
-      title: 'Eye Treatments & Extensions',
-      text: 'Discover',
-      image: data.eye.childImageSharp.fluid,
-      link: '/beauty/eye-treatments'
-    },
-    {
-      title: 'Laser Hair Removal',
-      text: 'Discover',
-      image: data.laser.childImageSharp.fluid,
-      link: '/beauty/laser-hair-removal'
-    },
-    {
-      title: 'Plasma Technology',
-      text: 'Discover',
-      image: data.plasma.childImageSharp.fluid,
-      link: '/beauty/plasma-technology'
-    }
-    ,
-    {
-      title: 'Pure Facials',
-      text: 'Discover',
-      image: data.facials.childImageSharp.fluid,
-      link: '/beauty/pure-facials'
-    }
-    ,
-    {
-      title: 'Other Treatments',
-      text: 'Discover',
-      image: data.other.childImageSharp.fluid,
-      link: '/beauty/other-treatments'
-    }
-  ]
-
+  
   return (
     <StaticQuery
     query={indexQuery}
-    render={data => (
-      <Layout>
-        <SEO
-          keywords={[`Beauty Ely`, `Hair Salon Ely`, `Beauty Salon Ely`, `Nails Ely`, 'Nail Bar Ely']}
-          title="Home"
-        />
-        <HeroFull
-          herofull={data.herofull.childImageSharp.fluid} 
-          hero1={data.hero1.childImageSharp.fluid}
-          hero2={data.hero2.childImageSharp.fluid}
-          hero3={data.hero3.childImageSharp.fluid}
-          hero4={data.hero4.childImageSharp.fluid}
-          loaded={loaded} 
-        />
-        <Intro image={data.about.childImageSharp.fluid} />
-        <ServiceList 
-          height="45" 
-          services={serviceList}
-          title={"Pamper yourself with some <br /> of our wide variety of treatments."}
-        />
-        <Testimonials />
-        <BookCta bg={data.bookbg.childImageSharp.fluid} marginBottom />
-        <InstaFeed token="IGQVJWSFBsWDctOXpzeVo4S1VNYjJOc0hHbnY4OHR4ZAUZAPc193c3pJRGY1M2NNVS16RnpRaHpJeEF3Yy1HRjN4OVQ2QndlZAzdhWFlsYkhoYTVOcmZA4cTYyMzFNOVBtdnBmX0VEbE5yVHFabkNka1VDdAZDZD" />
-      </Layout>
-    )}
+    render={data => {
+      const serviceList = [
+        {
+          title: 'Hands & Feet',
+          text: 'Discover',
+          image: data.hands.childImageSharp.fluid,
+          link: '/beauty/hands-and-feet'
+        },
+        {
+          title: 'Massage',
+          text: 'Discover',
+          image: data.massage.childImageSharp.fluid,
+          link: '/beauty/massage'
+        },
+        {
+          title: 'Waxing',
+          text: 'Discover',
+          image: data.waxing.childImageSharp.fluid,
+          link: '/beauty/waxing'
+        },
+        {
+          title: 'Eye Treatments & Extensions',
+          text: 'Discover',
+          image: data.eye.childImageSharp.fluid,
+          link: '/beauty/eye-treatments'
+        },
+        {
+          title: 'Laser Hair Removal',
+          text: 'Discover',
+          image: data.laser.childImageSharp.fluid,
+          link: '/beauty/laser-hair-removal'
+        },
+        {
+          title: 'Plasma Technology',
+          text: 'Discover',
+          image: data.plasma.childImageSharp.fluid,
+          link: '/beauty/plasma-technology'
+        }
+        ,
+        {
+          title: 'Pure Facials',
+          text: 'Discover',
+          image: data.facials.childImageSharp.fluid,
+          link: '/beauty/pure-facials'
+        }
+        ,
+        {
+          title: 'Other Treatments',
+          text: 'Discover',
+          image: data.other.childImageSharp.fluid,
+          link: '/beauty/other-treatments'
+        }
+      ]
+      return (
+        <Layout>
+          <SEO
+            keywords={[`Beauty Ely`, `Hair Salon Ely`, `Beauty Salon Ely`, `Nails Ely`, 'Nail Bar Ely']}
+            title="Home"
+          />
+          <HeroFull
+            herofull={data.herofull.childImageSharp.fluid} 
+            hero1={data.hero1.childImageSharp.fluid}
+            hero2={data.hero2.childImageSharp.fluid}
+            hero3={data.hero3.childImageSharp.fluid}
+            hero4={data.hero4.childImageSharp.fluid}
+            loaded={loaded} 
+          />
+          <Intro image={data.about.childImageSharp.fluid} />
+          <ServiceList 
+            height="45" 
+            services={serviceList}
+            title={"Pamper yourself with some <br /> of our wide variety of treatments."}
+          />
+          <Testimonials />
+          <BookCta bg={data.bookbg.childImageSharp.fluid} marginBottom />
+          <InstaFeed token="IGQVJWSFBsWDctOXpzeVo4S1VNYjJOc0hHbnY4OHR4ZAUZAPc193c3pJRGY1M2NNVS16RnpRaHpJeEF3Yy1HRjN4OVQ2QndlZAzdhWFlsYkhoYTVOcmZA4cTYyMzFNOVBtdnBmX0VEbE5yVHFabkNka1VDdAZDZD" />
+        </Layout>
+      )}
+    }
     />
   );
 }
-
-IndexPage.propTypes = {
-  data: PropTypes.object,
-};
 
 const indexQuery = graphql`
   query {
@@ -221,6 +216,5 @@ const indexQuery = graphql`
   }
 `
 
-
-export default IndexPage
+export default IndexPage;
 

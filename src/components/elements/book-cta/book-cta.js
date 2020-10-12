@@ -4,7 +4,6 @@ import BackgroundImage from 'gatsby-background-image'
 
 import ButtonBordered from '../button-bordered/button-bordered'
 
-import './book-cta-style.scss';
 
 const BookCta = ({marginBottom, bg}) => (
   <div className={`${marginBottom && 'mb-10 md:mb-16'}`}>
