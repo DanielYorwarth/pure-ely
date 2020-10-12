@@ -35,13 +35,13 @@ const ServicePage = ({ data }) => {
             <div className="font-thin" key={1}>
               <ListItem text={<span>Eyebrow tint: <b className="font-semibold">£12.50</b></span>} />
               <ListItem text={<span>Eyelash & Eyebrow tint: <b className="font-semibold">£24.50</b></span>} />
-              <ListItem text={<span>LVL Lash Lift: <b className="font-semibold">£19</b></span>} />
-              <ListItem text={<span>Eyelash tint: <b className="font-semibold">£65</b></span>} />
+              <ListItem text={<span>LVL Lash Lift: <b className="font-semibold">£65</b></span>} />
+              <ListItem text={<span>Eyelash tint: <b className="font-semibold">£19</b></span>} />
             </div>,
             <div className="font-thin" key={2}>
-              <ListItem text={<span>Eyelash Extensions <span className="text-sm">(Full set)</span>: <b className="font-semibold">£42.50</b></span>} />
-              <ListItem text={<span>2 Week Eyelash infills <span className="text-sm">(30 mins)</span>: <b className="font-semibold">£70</b></span>} />
-              <ListItem text={<span>3 Week Eyelash infills <span className="text-sm">(45 mins)</span>: <b className="font-semibold">£45</b></span>} />
+              <ListItem text={<span>Eyelash Extensions <span className="text-sm">(Full set)</span>: <b className="font-semibold">£55</b></span>} />
+              <ListItem text={<span>2 Week Eyelash infills <span className="text-sm">(30 mins)</span>: <b className="font-semibold">£22</b></span>} />
+              <ListItem text={<span>3 Week Eyelash infills <span className="text-sm">(45 mins)</span>: <b className="font-semibold">£35</b></span>} />
               <span className="text-sm">*Patch Tests for these treatments will need to be completed 48 hours prior to treatment</span>
             </div>
           ]
@@ -50,7 +50,7 @@ const ServicePage = ({ data }) => {
       <SubIntro 
         text={<p>Enhance your natural eyelashes and eyebrows with our range of treatments including LVL lash lift and tinting. Eyelash extensions are also available, including infills every two to three weeks. <i>Please note, patch tests will need to be completed 48 hours prior to your appointment.</i></p>}
       />
-      <BookCta />
+      <BookCta bg={data.bookbg.childImageSharp.fluid} />
     </Layout>
   );
 }
@@ -65,6 +65,13 @@ const indexQuery = graphql`
       childImageSharp {
         fluid(quality: 100, maxWidth: 1920) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
+    bookbg: file(relativePath: { eq: "booking-bg-blurry.jpg" }) {
+      childImageSharp {
+        fluid(quality: 100, maxWidth: 1920) {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }

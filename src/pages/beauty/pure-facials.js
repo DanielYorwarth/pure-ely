@@ -29,27 +29,28 @@ const ServicePage = ({ data }) => {
         bgImage={data.hero.childImageSharp.fluid}
         data={{
           title: 'Pure Facials',
+          subTitle: '*Time allocated includes consultation and cleaning of facility after treatment for Covid 19 as per guidelines',
           twoCol: [
             <div className="mb-10 md:mb-0" key={1}>
-              <div className="mb-10">
-                <h4 className="text-2xl mb-2">PURE CLEANSE FACIAL <b>£45 (45 mins)</b></h4>
-                <p className="font-light">Our pure cleanse facial will leave you feeling fresh and moisturised. 
-                This includes an exfoliating treatment during the treatment followed 
-                by a mask and a scalp massage to ensure you are feeling relaxed.</p>
+              <div className="mb-5">
+                <h4 className="text-xl mb-2">PURE DERMAPLANING <b>£65 (60 mins)</b></h4>
+                <p className="font-light">This treatment is purely dermaplaning. Working on all skin types, reducing any dullness, fine lines, and acne scarring and getting rid of fine hairs and dead skin cells on the surface of the skin, helping the luxurious Avant finishing products to absorb even deeper into the skin.</p>
               </div>
               <div>
-                <h4 className="text-2xl mb-2">PURE DERMAPLANING <b>£65 (60 mins)</b></h4>
-                <p className="font-light">This treatment is purely dermaplaning. Working on all skin types, reducing any dullness, fine lines, and acne scarring and getting rid of fine hairs and dead skin cells on the surface of the skin, helping the luxurious Avant finishing products to absorb even deeper into the skin.</p>
+                <h4 className="text-xl mb-2">PURE RELAX FACIALL <b>£65 (45 mins)</b></h4>
+                <p className="font-light">The Pure Relax facial treatment focuses on relaxation, starting with a cleanse, tone, exfoliation and moisturising mask, followed by a scalp, neck and arm massage.</p>
               </div>
             </div>,
             <div key={2}>
-              <div className="mb-10">
-                <h4 className="text-2xl mb-2">PURE RELAX FACIALL <b>£65 (75 mins</b></h4>
-                <p className="font-light">The Pure Relax facial treatment focuses on relaxation, starting with a cleanse, tone, exfoliation and moisturising mask, followed by a scalp, neck and arm massage.</p>
+              <div className="mb-5">
+                <h4 className="text-xl mb-2">PURE REJUVENATION & DERMAPLANING <b>£80 (70 mins)</b></h4>
+                <p className="font-light">Be totally rejuvenated and fresh faced with our rejuvenation facial including dermaplaning. Starting with a deep cleanse from the dermaplaning, followed by rejuvenating glow products and finishing with a head and shoulder massage, ensuring you are completely revitalized.</p>
               </div>
               <div>
-                <h4 className="text-2xl mb-2">PURE REJUVENATION & DERMAPLANING <b>£85 (90 mins)</b></h4>
-                <p className="font-light">Be totally rejuvenated and fresh faced with our rejuvenation facial including dermaplaning. Starting with a deep cleanse from the dermaplaning, followed by rejuvenating glow products and finishing with a head and shoulder massage, ensuring you are completely revitalized.</p>
+                <h4 className="text-xl mb-2">Pure Dermaplaning <b>£65 (50 mins)</b></h4>
+              </div>
+              <div>
+                <h4 className="text-xl mb-2">Pure Relax <b>£65 (45 mins)</b></h4>
               </div>
             </div>
           ]
@@ -58,7 +59,7 @@ const ServicePage = ({ data }) => {
       <SubIntro 
         text={<p>Pamper and cleanse your skin with one of our luxury facials. From a cleansing treatment to soothe and exfoliate your face to dermaplaning reducing dullness, fine lines, and acne scarring, we have a facial treatment for everyone. </p>}
       />
-      <BookCta />
+      <BookCta bg={data.bookbg.childImageSharp.fluid} />
     </Layout>
   );
 }
@@ -73,6 +74,13 @@ const indexQuery = graphql`
       childImageSharp {
         fluid(quality: 100, maxWidth: 1920) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
+    bookbg: file(relativePath: { eq: "booking-bg-blurry.jpg" }) {
+      childImageSharp {
+        fluid(quality: 100, maxWidth: 1920) {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }

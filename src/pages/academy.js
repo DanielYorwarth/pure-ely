@@ -56,6 +56,13 @@ const indexQuery = graphql`
         }
       }
     }
+    bookbg: file(relativePath: { eq: "booking-bg-blurry.jpg" }) {
+      childImageSharp {
+        fluid(quality: 100, maxWidth: 1920) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
   }
 `
 const AcademyComponent = props => (

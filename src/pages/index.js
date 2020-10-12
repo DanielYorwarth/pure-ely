@@ -76,29 +76,34 @@ const IndexPage = ({ data }) => {
   ]
 
   return (
-    <Layout>
-      <SEO
-        keywords={[`Beauty Ely`, `Hair Salon Ely`, `Beauty Salon Ely`, `Nails Ely`, 'Nail Bar Ely']}
-        title="Home"
-      />
-      <HeroFull
-        herofull={data.herofull.childImageSharp.fluid} 
-        hero1={data.hero1.childImageSharp.fluid}
-        hero2={data.hero2.childImageSharp.fluid}
-        hero3={data.hero3.childImageSharp.fluid}
-        hero4={data.hero4.childImageSharp.fluid}
-        loaded={loaded} 
-      />
-      <Intro image={data.about.childImageSharp.fluid} />
-      <ServiceList 
-        height="45" 
-        services={serviceList}
-        title={"Pamper yourself with some <br /> of our wide variety of treatments."}
-      />
-      <Testimonials />
-      <BookCta marginBottom />
-      <InstaFeed token="IGQVJWSFBsWDctOXpzeVo4S1VNYjJOc0hHbnY4OHR4ZAUZAPc193c3pJRGY1M2NNVS16RnpRaHpJeEF3Yy1HRjN4OVQ2QndlZAzdhWFlsYkhoYTVOcmZA4cTYyMzFNOVBtdnBmX0VEbE5yVHFabkNka1VDdAZDZD" />
-    </Layout>
+    <StaticQuery
+    query={indexQuery}
+    render={data => (
+      <Layout>
+        <SEO
+          keywords={[`Beauty Ely`, `Hair Salon Ely`, `Beauty Salon Ely`, `Nails Ely`, 'Nail Bar Ely']}
+          title="Home"
+        />
+        <HeroFull
+          herofull={data.herofull.childImageSharp.fluid} 
+          hero1={data.hero1.childImageSharp.fluid}
+          hero2={data.hero2.childImageSharp.fluid}
+          hero3={data.hero3.childImageSharp.fluid}
+          hero4={data.hero4.childImageSharp.fluid}
+          loaded={loaded} 
+        />
+        <Intro image={data.about.childImageSharp.fluid} />
+        <ServiceList 
+          height="45" 
+          services={serviceList}
+          title={"Pamper yourself with some <br /> of our wide variety of treatments."}
+        />
+        <Testimonials />
+        <BookCta bg={data.bookbg.childImageSharp.fluid} marginBottom />
+        <InstaFeed token="IGQVJWSFBsWDctOXpzeVo4S1VNYjJOc0hHbnY4OHR4ZAUZAPc193c3pJRGY1M2NNVS16RnpRaHpJeEF3Yy1HRjN4OVQ2QndlZAzdhWFlsYkhoYTVOcmZA4cTYyMzFNOVBtdnBmX0VEbE5yVHFabkNka1VDdAZDZD" />
+      </Layout>
+    )}
+    />
   );
 }
 
@@ -145,63 +150,70 @@ const indexQuery = graphql`
     }
     about: file(relativePath: { eq: "pure-ely-beauty-salon-slippers.jpg" }) {
       childImageSharp {
-        fluid(quality: 100, maxWidth: 1200) {
+        fluid(quality: 80, maxWidth: 600) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    hands: file(relativePath: { eq: "hands-and-feet.jpg" }) {
+    hands: file(relativePath: { eq: "spa-pedi.jpg" }) {
       childImageSharp {
-        fluid(quality: 100, maxWidth: 1200) {
+        fluid(quality: 80, maxWidth: 600) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    massage: file(relativePath: { eq: "massage.jpg" }) {
+    massage: file(relativePath: { eq: "room-2.jpg" }) {
       childImageSharp {
-        fluid(quality: 100, maxWidth: 1200) {
+        fluid(quality: 80, maxWidth: 600) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    waxing: file(relativePath: { eq: "waxing.jpg" }) {
+    waxing: file(relativePath: { eq: "waxing-bg.jpg" }) {
       childImageSharp {
-        fluid(quality: 100, maxWidth: 1200) {
+        fluid(quality: 80, maxWidth: 600) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    eye: file(relativePath: { eq: "eye-treatments-and-extentions.jpg" }) {
+    eye: file(relativePath: { eq: "waxing.jpg" }) {
       childImageSharp {
-        fluid(quality: 100, maxWidth: 1200) {
+        fluid(quality: 80, maxWidth: 600) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    laser: file(relativePath: { eq: "laser-hair-removal.jpg" }) {
+    laser: file(relativePath: { eq: "eye-treatments-and-extentions.jpg" }) {
       childImageSharp {
-        fluid(quality: 100, maxWidth: 1200) {
+        fluid(quality: 80, maxWidth: 600) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     plasma: file(relativePath: { eq: "plasma-cta.jpg" }) {
       childImageSharp {
-        fluid(quality: 100, maxWidth: 1200) {
+        fluid(quality: 80, maxWidth: 600) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     facials: file(relativePath: { eq: "facials-cta.jpg" }) {
       childImageSharp {
-        fluid(quality: 100, maxWidth: 1200) {
+        fluid(quality: 80, maxWidth: 600) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     other: file(relativePath: { eq: "other-treatments-cta.jpg" }) {
       childImageSharp {
-        fluid(quality: 100, maxWidth: 1200) {
+        fluid(quality: 80, maxWidth: 600) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    bookbg: file(relativePath: { eq: "booking-bg-blurry.jpg" }) {
+      childImageSharp {
+        fluid(quality: 100, maxWidth: 1920) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
@@ -209,16 +221,6 @@ const indexQuery = graphql`
   }
 `
 
-const IndexComponent = props => (
-  <StaticQuery
-    query={indexQuery}
-    render={data => (
-      <IndexPage props data={data} {...props} />
-    )}
-  />
-)
 
-IndexComponent.displayName = "IndexComponent"
-
-export default IndexComponent
+export default IndexPage
 

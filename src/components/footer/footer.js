@@ -1,12 +1,31 @@
 import React from 'react';
 import {Link} from 'gatsby';
 import AniLink from "gatsby-plugin-transition-link/AniLink"
+import PropTypes from "prop-types";
 
 import Socials from '../elements/socials/socials';
 
 import './footer.styles.scss';
 
-const Footer = () => {
+const Footer = ({logoType}) => {
+  let email;
+  switch (logoType) {
+    case 'beauty':
+      email = 'info@pureely.co.uk'
+      break;
+    case 'aesthetics':
+      email = 'info@oureelyaesthetics.co.uk'
+      break;
+    case 'academy':
+      email = 'info@pureely.co.uk'
+      break;
+    case 'hair':
+      email = 'info@pureelyhair.co.uk'
+      break;
+    default:
+      email = 'info@pureely.co.uk'
+      break;
+  }
   return (
     <div className="relative text-primary-dark">
       <div className="max-w-screen-xl mx-auto px-4 md:px-4 py-8 md:py-16 relative z-10 flex flex-wrap">
@@ -15,7 +34,7 @@ const Footer = () => {
             <Socials primary />
           </div>
           <div className="mb-8 md:mb-10">
-            <span className="pr-6"><a href="mailto:info@pureely.co.uk">info@pureely.co.uk</a></span>
+            <span className="pr-6"><a href={`mailto:${email}`}>{email}</a></span>
             <a href="tel:01353661321">01353 661 321</a>
           </div>
           <ul className="flex flex-wrap mb-6 md:mb-0 justify-center md:justify-start leading-loose">
@@ -79,6 +98,10 @@ const Footer = () => {
       <div className="inset-0 absolute bg-primary-dark opacity-10"/>
     </div>
   )
+};
+
+Footer.propTypes = {
+  logoType: PropTypes.string,
 };
 
 export default Footer;

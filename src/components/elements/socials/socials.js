@@ -31,15 +31,15 @@ const Socials = ({dark, primary}) => {
   return (
     <div className="flex flex-wrap">
        <a rel="noreferrer" target="_blank" className="social-link" href="https://twitter.com/pure_ely">
-          <img alt="twitter" src={twitterIcon} />
+          <img width="19" height="15" alt="twitter" src={twitterIcon} />
         </a>
         <div className="px-8">
         <a rel="noreferrer" target="_blank" className="social-link" href="https://www.instagram.com/pure__ely/?hl=en">
-          <img alt="instagram" src={instaIcon} />
+          <img width="18" height="18" alt="instagram" src={instaIcon} />
         </a>
         </div>
         <a rel="noreferrer" target="_blank" className="social-link" href="https://www.facebook.com/www.pureely.co.uk/">
-          <img alt="facebook" src={facebookIcon} />
+          <img width="8" height="16" alt="facebook" src={facebookIcon} />
         </a>
     </div>
   );

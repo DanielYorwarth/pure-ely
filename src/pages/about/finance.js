@@ -96,7 +96,7 @@ const FinancePage = ({ data }) => {
           <span className="block text-sm mt-10">Pure Ely Limited is a registered Trading name, Credit Introducer and Appointed Representative of Social Money Ltd t/a Payl8r, a company registered in England under company number 08054296 and is authorised and regulated by the Financial Conduct Authority and is entered on the Financial Services Register under reference number: 675283. registered with the Office of the Information Commissioner reference number 08054296.</span>
         </div>}
       />
-      <BookCta />
+      <BookCta bg={data.bookbg.childImageSharp.fluid}/>
     </Layout>
   );
 }
@@ -107,7 +107,7 @@ FinancePage.propTypes = {
 
 const indexQuery = graphql`
   query {
-    herofull: file(relativePath: { eq: "ely-salon-pure.jpg" }) {
+    herofull: file(relativePath: { eq: "salon-updated.jpg" }) {
       childImageSharp {
         fluid(quality: 100, maxWidth: 1920) {
           ...GatsbyImageSharpFluid_withWebp
@@ -117,6 +117,13 @@ const indexQuery = graphql`
     pay: file(relativePath: { eq: "payl8r.jpg" }) {
       childImageSharp {
         fluid(quality: 100, maxWidth: 300) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    bookbg: file(relativePath: { eq: "booking-bg-blurry.jpg" }) {
+      childImageSharp {
+        fluid(quality: 100, maxWidth: 1920) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }

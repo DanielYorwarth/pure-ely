@@ -31,10 +31,11 @@ const ServicePage = ({ data }) => {
         bgImage={data.hero.childImageSharp.fluid}
         data={{
           title: 'Massage',
+          subTitle: '*Time allocated includes consultation and cleaning of facility after treatment for Covid 19 as per guidelines',
           twoCol: [
             <div className="font-thin" key={1}>
               <ListItem text={<span>Head Massage <span className="text-sm">(20 mins)</span>: <b className="font-semibold">£25</b></span>} />
-              <ListItem text={<span>Half Body Massage <span className="text-sm">(30 mins)</span>: <b className="font-semibold">£35</b></span>} />
+              <ListItem text={<span>Half Body Massage <span className="text-sm">(30 mins)</span>: <b className="font-semibold">£25</b></span>} />
               <ListItem text={<span>Full Body Massage <span className="text-sm">(60 mins)</span>: <b className="font-semibold">£65</b></span>} />
             </div>,
             <div className="font-thin" key={2}>
@@ -48,7 +49,7 @@ const ServicePage = ({ data }) => {
       <SubIntro 
         text={<p>Relax and unwind at Pure Ely with one of our luxurious massages. Ranging from 20 minutes to 60 minutes, enjoy everything from a head massage to a full body hot stone massage experience. </p>}
       />
-      <BookCta />
+      <BookCta bg={data.bookbg.childImageSharp.fluid} />
     </Layout>
   );
 }
@@ -63,6 +64,13 @@ const indexQuery = graphql`
       childImageSharp {
         fluid(quality: 100, maxWidth: 1920) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
+    bookbg: file(relativePath: { eq: "booking-bg-blurry.jpg" }) {
+      childImageSharp {
+        fluid(quality: 100, maxWidth: 1920) {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }

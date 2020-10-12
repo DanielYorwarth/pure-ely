@@ -105,7 +105,7 @@ const ServicePage = ({ data }) => {
           />
         }}
       />
-      <BookCta />
+      <BookCta bg={data.bookbg.childImageSharp.fluid} />
     </Layout>
   );
 
@@ -127,6 +127,13 @@ const indexQuery = graphql`
     colour: file(relativePath: { eq: "Permanent-makeup.jpg" }) {
       childImageSharp {
         fluid(quality: 100, maxWidth: 1000) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    bookbg: file(relativePath: { eq: "booking-bg-blurry.jpg" }) {
+      childImageSharp {
+        fluid(quality: 100, maxWidth: 1920) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }

@@ -37,7 +37,7 @@ const ServicePage = ({ data }) => {
               <ListItem text={<span>Full leg: <b className="font-semibold">£28</b></span>} />
               <ListItem text={<span>Half leg: <b className="font-semibold">£22</b></span>} />
               <ListItem text={<span>Bikini: <b className="font-semibold">£21</b></span>} />
-              <ListItem text={<span>Brazilian <span className="text-sm">(Leaves a strip)</span>: <b className="font-semibold">£21</b></span>} />
+              <ListItem text={<span>Brazilian <span className="text-sm">(Leaves a strip)</span>: <b className="font-semibold">£28</b></span>} />
             </div>,
             <div className="font-thin" key={2}>
               <ListItem text={<span>Hollywood <span className="text-sm">(All intimate hair removed)</span>: <b className="font-semibold">£35</b></span>} />
@@ -59,7 +59,7 @@ const ServicePage = ({ data }) => {
       <SubIntro 
         text={<p>Remove unwanted hair quickly and easily at Pure Ely with our hot wax treatments. </p>}
       />
-      <BookCta />
+      <BookCta bg={data.bookbg.childImageSharp.fluid} />
     </Layout>
   );
 }
@@ -74,6 +74,13 @@ const indexQuery = graphql`
       childImageSharp {
         fluid(quality: 100, maxWidth: 1920) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
+    bookbg: file(relativePath: { eq: "booking-bg-blurry.jpg" }) {
+      childImageSharp {
+        fluid(quality: 100, maxWidth: 1920) {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }

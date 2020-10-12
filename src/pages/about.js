@@ -53,7 +53,7 @@ const AboutPage = ({ data }) => {
           </p>
         </div>}
       />
-      <BookCta />
+      <BookCta bg={data.bookbg.childImageSharp.fluid} />
     </Layout>
   );
 }
@@ -64,7 +64,14 @@ AboutPage.propTypes = {
 
 const indexQuery = graphql`
   query {
-    herofull: file(relativePath: { eq: "ely-salon-pure.jpg" }) {
+    herofull: file(relativePath: { eq: "salon-updated.jpg" }) {
+      childImageSharp {
+        fluid(quality: 100, maxWidth: 1920) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    bookbg: file(relativePath: { eq: "booking-bg-blurry.jpg" }) {
       childImageSharp {
         fluid(quality: 100, maxWidth: 1920) {
           ...GatsbyImageSharpFluid_withWebp

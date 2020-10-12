@@ -34,20 +34,23 @@ const ContactPage = ({ data }) => {
       />
       <div className="flex flex-wrap mx-auto max-w-screen-xl mb-10 md:mb-32 px-4 justify-between">
         <div className="w-full mb-10 lg:mb-0 lg:w-2/5">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2434.4554082385303!2d0.2641241158029285!3d52.398422079791196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8130b50e016a9%3A0x5ba3510c57407e53!2sPure%20Ely%20Ltd!5e0!3m2!1sen!2suk!4v1597224359293!5m2!1sen!2suk" width="100%" height="300" frameBorder="0"  allowFullScreen="" aria-hidden="false" tabIndex="0"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2434.4554082385303!2d0.2641241158029285!3d52.398422079791196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8130b50e016a9%3A0x5ba3510c57407e53!2sPure%20Ely%20Ltd!5e0!3m2!1sen!2suk!4v1597224359293!5m2!1sen!2suk" width="100%" height="560" frameBorder="0"  allowFullScreen="" aria-hidden="false" tabIndex="0"></iframe>
         </div>
         <div className="w-full md:w-1/2 lg:w-1/4 mb-10 lg:mb-0 ">
           <h3 className="text-primary text-4xl uppercase font-light leading-tight mb-4">Contact Information</h3>
-          <h3 className="text-primary text-2xl uppercase font-light leading-tight mb-4">Hair</h3>
-          <p className="text-primary-dark font-bold mb-4">1 High Street Passage, <br/>
+          <h3 className="text-primary text-2xl uppercase font-bold leading-tight mb-1">Hair</h3>
+          <p className="text-primary-darkd mb-2">1 High Street Passage, <br/>
           Ely, CB7 4NB <br/>
           United Kingdom </p>
-          <h3 className="text-primary text-2xl uppercase font-light leading-tight mb-4">Beauty</h3>
-          <p className="text-primary-dark font-bold mb-4">4-8 Three Cups Walk, <br/>
+          <a className="mb-10 block" href="mailto:info@pureelyhair.co.uk"><div className="flex flex-wrap text-primary-dark items-start"><img className="pr-2 w-8" src={mailIcon} />info@pureelyhair.co.uk</div></a>
+          <h3 className="text-primary text-2xl uppercase font-bold leading-tight mb-1">Beauty</h3>
+          <p className="text-primary-dark mb-4">4-8 Three Cups Walk, <br/>
           Ely, CB7 4AN <br/>
           United Kingdom </p>
-          <a className="mb-3 block" href="mailto:info@pureely.co.uk"><div className="flex flex-wrap text-primary-dark font-bold items-start"><img className="pr-2 w-8" src={mailIcon} />info@pureely.co.uk</div></a>
-          <a href="tel:01353661321"><div className="flex flex-wrap text-primary-dark font-bold items-start"><img className="pr-2 w-8" src={phoneIcon} />01353 661 321</div></a>
+          <a className="mb-3 block" href="mailto:info@pureely.co.uk"><div className="flex flex-wrap text-primary-dark items-start"><img className="pr-2 w-8" src={mailIcon} />info@pureely.co.uk</div></a>
+          <a className="mb-10 block" href="tel:01353661321"><div className="flex flex-wrap text-primary-dark items-start"><img className="pr-2 w-8" src={phoneIcon} />01353 661 321</div></a>
+          <h3 className="text-primary text-2xl uppercase font-bold leading-tight mb-1">Hair</h3>
+          <a className="block" href="mailto:info@oureelyaesthetics.co.uk"><div className="flex flex-wrap text-primary-dark items-start"><img className="pr-2 w-8" src={mailIcon} />info@oureelyaesthetics.co.uk</div></a>
         </div>
         <div className="w-full md:w-1/2 lg:w-1/4 mb-10 lg:mb-0 leading-relaxed">
           <h3 className="text-primary text-4xl uppercase font-light leading-tight mb-4">OPENING HOURS</h3>
@@ -85,7 +88,7 @@ const ContactPage = ({ data }) => {
           </div>
         </form>
       </div>
-      <BookCta />
+      <BookCta bg={data.bookbg.childImageSharp.fluid} />
     </Layout>
   );
 }
@@ -96,7 +99,14 @@ ContactPage.propTypes = {
 
 const indexQuery = graphql`
   query {
-    herofull: file(relativePath: { eq: "ely-salon-pure.jpg" }) {
+    herofull: file(relativePath: { eq: "salon-updated.jpg" }) {
+      childImageSharp {
+        fluid(quality: 100, maxWidth: 1920) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    bookbg: file(relativePath: { eq: "booking-bg-blurry.jpg" }) {
       childImageSharp {
         fluid(quality: 100, maxWidth: 1920) {
           ...GatsbyImageSharpFluid_withWebp

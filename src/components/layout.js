@@ -9,7 +9,7 @@ const Layout = ({ children, pageType }) => {
     <div>
       <Header logoType={pageType} loaded={true} />
       {children}
-      <Footer />
+      <Footer logoType={pageType} />
     </div>
   );
 }

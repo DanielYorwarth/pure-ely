@@ -36,7 +36,7 @@ const AestheticsPage = ({ data }) => {
           title: 'Aesthetics',
           subTitle: 'Consultations are discreet and necessary for all treatments before booking. Deposits of 50% required for new clients.',
           fourCol: {
-            title: <div>OUR <br/> OFFERING</div>,
+            title: <div>OUR <br/> TREATMENTS</div>,
             textList: [
               <div key={1}><ListItem text="PROFHILO ™" /><ListItem text="Underarm Hyperhidrosis Treatment for unwanted sweating" /></div>,
               <div key={2}><ListItem text="Dermal Filler Treatment 1ml (various areas)" /><ListItem text="Anti Wrinkle Injections" /></div>,
@@ -228,7 +228,7 @@ const AestheticsPage = ({ data }) => {
           ))}
       </div>
       <Testimonials />
-      <BookCta marginBottom />
+      <BookCta bg={data.bookbg.childImageSharp.fluid} marginBottom />
       <InstaFeed token="IGQVJWSFBsWDctOXpzeVo4S1VNYjJOc0hHbnY4OHR4ZAUZAPc193c3pJRGY1M2NNVS16RnpRaHpJeEF3Yy1HRjN4OVQ2QndlZAzdhWFlsYkhoYTVOcmZA4cTYyMzFNOVBtdnBmX0VEbE5yVHFabkNka1VDdAZDZD" />
       </div>}
     </Layout>
@@ -258,6 +258,13 @@ const indexQuery = graphql`
     permanent: file(relativePath: { eq: "permanent-makeup-bg-cta.jpg" }) {
       childImageSharp {
         fluid(quality: 100, maxWidth: 1200) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    bookbg: file(relativePath: { eq: "booking-bg-blurry.jpg" }) {
+      childImageSharp {
+        fluid(quality: 100, maxWidth: 1920) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }

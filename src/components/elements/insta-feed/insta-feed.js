@@ -11,7 +11,7 @@ const InstaFeed = ({token}) => {
   let [loading, setLoading] = useState(true);
   useEffect(() => {
     if(!token) return
-    fetch(`https://graph.instagram.com/me/media?fields=id,caption,permalink,media_url,media_type,thumbnail_url&access_token=${token}&limit=6`)
+    fetch(`https://graph.instagram.com/me/media?fields=id,caption,permalink,media_url,images,media_type,thumbnail_url&access_token=${token}&limit=6`)
     .then(response => response.json())
     .then(data => 
       {
