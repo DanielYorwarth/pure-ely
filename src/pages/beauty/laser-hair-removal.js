@@ -115,14 +115,14 @@ const indexQuery = graphql`
   query {
     hero: file(relativePath: { eq: "best-laser-hair-removal-in-ely.jpg" }) {
       childImageSharp {
-        fluid(quality: 100, maxWidth: 1920) {
+        fluid(quality: 50, maxWidth: 1920) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
     bookbg: file(relativePath: { eq: "booking-bg-blurry.jpg" }) {
       childImageSharp {
-        fluid(quality: 100, maxWidth: 1920) {
+        fluid(quality: 50, maxWidth: 1920) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }

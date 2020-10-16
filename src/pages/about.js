@@ -66,14 +66,14 @@ const indexQuery = graphql`
   query {
     herofull: file(relativePath: { eq: "salon-updated.jpg" }) {
       childImageSharp {
-        fluid(quality: 100, maxWidth: 1920) {
+        fluid(quality: 50, maxWidth: 1920) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     bookbg: file(relativePath: { eq: "booking-bg-blurry.jpg" }) {
       childImageSharp {
-        fluid(quality: 100, maxWidth: 1920) {
+        fluid(quality: 50, maxWidth: 1920) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }

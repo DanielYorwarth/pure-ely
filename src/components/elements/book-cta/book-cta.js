@@ -5,7 +5,7 @@ import BackgroundImage from 'gatsby-background-image'
 import ButtonBordered from '../button-bordered/button-bordered'
 
 
-const BookCta = ({marginBottom, bg}) => (
+const BookCta = ({marginBottom, bg, link}) => (
   <div className={`${marginBottom && 'mb-10 md:mb-16'}`}>
     <BackgroundImage
       Tag="section"
@@ -18,7 +18,7 @@ const BookCta = ({marginBottom, bg}) => (
             You can book appointments by calling <b>01353 661 321</b> or direct with our online booking system. 
             Please feel free to message us on <b>Facebook</b> or by email at <b>info@pureely.co.uk.</b>
           </p>
-          <ButtonBordered windowed text='Book Online' link='https://online.premiersoftware.co.uk/Book-Online-3G-V2/index2.php?i=21cea48d674d25790ce2f157548cf742&siteID=2' />
+          <ButtonBordered windowed text='Book Online' link={link ? link : 'https://online.premiersoftware.co.uk/Book-Online-3G-V2/index2.php?i=21cea48d674d25790ce2f157548cf742&siteID=2'} />
         </div>
       </div>
       <div className="inset-0 absolute bg-primary-darker opacity-75"/>
@@ -29,7 +29,8 @@ const BookCta = ({marginBottom, bg}) => (
 BookCta.propTypes = {
   data: PropTypes.object,
   marginBottom: PropTypes.bool,
-  bg: PropTypes.object
+  bg: PropTypes.object,
+  link: PropTypes.string
 }
 
 export default BookCta

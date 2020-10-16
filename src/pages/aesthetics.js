@@ -228,7 +228,7 @@ const AestheticsPage = ({ data }) => {
           ))}
       </div>
       <Testimonials />
-      <BookCta bg={data.bookbg.childImageSharp.fluid} marginBottom />
+      <BookCta link="https://online.premiersoftware.co.uk/Book-Online-3G-V2/index2.php?i=21cea48d674d25790ce2f157548cf742&siteID=3" bg={data.bookbg.childImageSharp.fluid} marginBottom />
       <InstaFeed token="IGQVJWSFBsWDctOXpzeVo4S1VNYjJOc0hHbnY4OHR4ZAUZAPc193c3pJRGY1M2NNVS16RnpRaHpJeEF3Yy1HRjN4OVQ2QndlZAzdhWFlsYkhoYTVOcmZA4cTYyMzFNOVBtdnBmX0VEbE5yVHFabkNka1VDdAZDZD" />
       </div>}
     </Layout>
@@ -243,28 +243,28 @@ const indexQuery = graphql`
   query {
     herofull: file(relativePath: { eq: "aesthetics-bg.jpg" }) {
       childImageSharp {
-        fluid(quality: 100, maxWidth: 1920) {
+        fluid(quality: 50, maxWidth: 1920) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
     tattooing: file(relativePath: { eq: "medical-tattoing-cta.jpg" }) {
       childImageSharp {
-        fluid(quality: 100, maxWidth: 1200) {
+        fluid(quality: 50, maxWidth: 1200) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     permanent: file(relativePath: { eq: "permanent-makeup-bg-cta.jpg" }) {
       childImageSharp {
-        fluid(quality: 100, maxWidth: 1200) {
+        fluid(quality: 50, maxWidth: 1200) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     bookbg: file(relativePath: { eq: "booking-bg-blurry.jpg" }) {
       childImageSharp {
-        fluid(quality: 100, maxWidth: 1920) {
+        fluid(quality: 50, maxWidth: 1920) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }

@@ -110,105 +110,105 @@ const indexQuery = graphql`
   query {
     herofull: file(relativePath: { eq: "main-bg.jpg" }) {
       childImageSharp {
-        fluid(quality: 100, maxWidth: 1920) {
+        fluid(quality: 50, maxWidth: 1920) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
     hero1: file(relativePath: { eq: "pure-ely-beauty-hoverover.jpg" }) {
       childImageSharp {
-        fluid(quality: 100, maxWidth: 1200) {
+        fluid(quality: 50, maxWidth: 1200) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
     hero2: file(relativePath: { eq: "pure-ely-Aesthetics-hoverover.jpg" }) {
       childImageSharp {
-        fluid(quality: 100, maxWidth: 1200) {
+        fluid(quality: 50, maxWidth: 1200) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
     hero3: file(relativePath: { eq: "pure-ely-academy-hoverover.jpg" }) {
       childImageSharp {
-        fluid(quality: 100, maxWidth: 1200) {
+        fluid(quality: 50, maxWidth: 1200) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
     hero4: file(relativePath: { eq: "pure-ely-hair-hoverover.jpg" }) {
       childImageSharp {
-        fluid(quality: 100, maxWidth: 1200) {
+        fluid(quality: 50, maxWidth: 1200) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
     about: file(relativePath: { eq: "pure-ely-beauty-salon-slippers.jpg" }) {
       childImageSharp {
-        fluid(quality: 80, maxWidth: 600) {
+        fluid(quality: 50, maxWidth: 600) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     hands: file(relativePath: { eq: "spa-pedi.jpg" }) {
       childImageSharp {
-        fluid(quality: 80, maxWidth: 600) {
+        fluid(quality: 50, maxWidth: 600) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     massage: file(relativePath: { eq: "room-2.jpg" }) {
       childImageSharp {
-        fluid(quality: 80, maxWidth: 600) {
+        fluid(quality: 50, maxWidth: 600) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     waxing: file(relativePath: { eq: "waxing-bg.jpg" }) {
       childImageSharp {
-        fluid(quality: 80, maxWidth: 600) {
+        fluid(quality: 50, maxWidth: 600) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     eye: file(relativePath: { eq: "waxing.jpg" }) {
       childImageSharp {
-        fluid(quality: 80, maxWidth: 600) {
+        fluid(quality: 50, maxWidth: 600) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     laser: file(relativePath: { eq: "eye-treatments-and-extentions.jpg" }) {
       childImageSharp {
-        fluid(quality: 80, maxWidth: 600) {
+        fluid(quality: 50, maxWidth: 600) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     plasma: file(relativePath: { eq: "plasma-cta.jpg" }) {
       childImageSharp {
-        fluid(quality: 80, maxWidth: 600) {
+        fluid(quality: 50, maxWidth: 600) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     facials: file(relativePath: { eq: "facials-cta.jpg" }) {
       childImageSharp {
-        fluid(quality: 80, maxWidth: 600) {
+        fluid(quality: 50, maxWidth: 600) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     other: file(relativePath: { eq: "other-treatments-cta.jpg" }) {
       childImageSharp {
-        fluid(quality: 80, maxWidth: 600) {
+        fluid(quality: 50, maxWidth: 600) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     bookbg: file(relativePath: { eq: "booking-bg-blurry.jpg" }) {
       childImageSharp {
-        fluid(quality: 100, maxWidth: 1920) {
+        fluid(quality: 50, maxWidth: 1920) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }

@@ -28,16 +28,16 @@ const Footer = ({logoType}) => {
   }
   return (
     <div className="relative text-primary-dark">
-      <div className="max-w-screen-xl mx-auto px-4 md:px-4 py-8 md:py-16 relative z-10 flex flex-wrap">
-        <div className="w-full md:w-2/3 text-center md:text-left">
-          <div className="mb-8 md:mb-10 flex justify-center md:justify-start">
+      <div className="max-w-screen-xl mx-auto px-4 md:px-4 py-6 md:py-16 relative z-10 flex flex-wrap">
+        <div className="w-full text-center md:text-left flex flex-col flex-wrap items-center">
+          <div className="mb-3 md:mb-8 flex justify-center md:justify-start">
             <Socials primary />
           </div>
-          <div className="mb-8 md:mb-10">
+          <div className="mb-3 md:mb-8">
             <span className="pr-6"><a href={`mailto:${email}`}>{email}</a></span>
             <a href="tel:01353661321">01353 661 321</a>
           </div>
-          <ul className="flex flex-wrap mb-6 md:mb-0 justify-center md:justify-start leading-loose">
+          <ul className="flex flex-wrap mb-8 md:mb-0 justify-center md:justify-start leading-loose">
             {[
               {
                 route: `/`,
@@ -79,14 +79,6 @@ const Footer = ({logoType}) => {
               </li>
             ))}
           </ul>
-        </div>
-        <div className="w-full md:w-1/3 text-center md:text-right leading-relaxed">
-          <b>Mon:</b> Aesthetics Clinic Only <br/>
-          <b>Tue - Wed:</b> 10am – 6pm <br/>
-          <b>Thu:</b> 9.30am – 5.30pm <br/>
-          <b>Fri:</b> 10am – 6pm <br/>
-          <b>Sat:</b> 9am – 3pm <br/>
-          <b>Sun:</b> Aesthetics Clinic Only
         </div>
       </div>
       <div className="py-3 md:py-6 border-white border-solid border-t-2 relative z-10 font-light">

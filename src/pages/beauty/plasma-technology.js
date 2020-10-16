@@ -130,42 +130,42 @@ const indexQuery = graphql`
   query {
     hero: file(relativePath: { eq: "plasma-ely.jpg" }) {
       childImageSharp {
-        fluid(quality: 100, maxWidth: 1920) {
+        fluid(quality: 50, maxWidth: 1920) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
     bg1: file(relativePath: { eq: "plasma-technology-ely.jpg" }) {
       childImageSharp {
-        fluid(quality: 100, maxWidth: 1000) {
+        fluid(quality: 50, maxWidth: 1000) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     bg2: file(relativePath: { eq: "application-areas.jpg" }) {
       childImageSharp {
-        fluid(quality: 100, maxWidth: 1000) {
+        fluid(quality: 50, maxWidth: 1000) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     bg3: file(relativePath: { eq: "beautiful-skin-ely.jpg" }) {
       childImageSharp {
-        fluid(quality: 100, maxWidth: 1000) {
+        fluid(quality: 50, maxWidth: 1000) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     bg4: file(relativePath: { eq: "plasma-treatment-ely.jpg" }) {
       childImageSharp {
-        fluid(quality: 100, maxWidth: 1000) {
+        fluid(quality: 50, maxWidth: 1000) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     bookbg: file(relativePath: { eq: "booking-bg-blurry.jpg" }) {
       childImageSharp {
-        fluid(quality: 100, maxWidth: 1920) {
+        fluid(quality: 50, maxWidth: 1920) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }

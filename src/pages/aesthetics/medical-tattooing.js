@@ -73,7 +73,7 @@ const ServicePage = ({ data }) => {
           />
         }}
       />
-      <BookCta bg={data.bookbg.childImageSharp.fluid}/>
+      <BookCta link="https://online.premiersoftware.co.uk/Book-Online-3G-V2/index2.php?i=21cea48d674d25790ce2f157548cf742&siteID=3" bg={data.bookbg.childImageSharp.fluid}/>
     </Layout>
   );
 }
@@ -86,21 +86,21 @@ const indexQuery = graphql`
   query {
     hero: file(relativePath: { eq: "medical-tattoing-ely.jpg" }) {
       childImageSharp {
-        fluid(quality: 100, maxWidth: 1920) {
+        fluid(quality: 65, maxWidth: 1920) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
     restoration: file(relativePath: { eq: "medical-tattooing-in-ely.jpg" }) {
       childImageSharp {
-        fluid(quality: 100, maxWidth: 1000) {
+        fluid(quality: 70, maxWidth: 1000) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     bookbg: file(relativePath: { eq: "booking-bg-blurry.jpg" }) {
       childImageSharp {
-        fluid(quality: 100, maxWidth: 1920) {
+        fluid(quality: 50, maxWidth: 1920) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
