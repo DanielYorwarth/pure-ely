@@ -20,7 +20,7 @@ const Intro = ({image}) => {
         </div>
         <div className="md:pl-16 w-full md:w-2/3 text-center max-w-2xl mx-auto">
           <h3 className="uppercase text-4xl text-primary-dark leading-tight mb-4"> Pure Ely Beauty, Pure Ely Aesthetics & Training Academy & Pure Ely Hair</h3>
-          <p className="font-light">Pure Ely strives to bring you the latest in Beauty, Hair & Aesthetics treatments.  2020 has seen our second clinic open in Ely where our Aesthetics, Training Academy and Hair Stylists will be based.  Our new training academy will be across both clinics bringing you specially designed courses to enhance your career opportunities under our care and guidance.  The convenience of having all your treatments under one trusted brand.</p>
+          <p className="font-light">Pure Ely strives to bring you the latest in Beauty, Hair and Aesthetics treatments. 2020 has seen our second clinic open in Ely, where our Aesthetics, Training Academy and Hair Stylists will be based. Our new Training Academy will be across both clinics, bringing you specially designed courses to enhance your career opportunities under our care and guidance. Pure Ely gives you the  convenience of having all your treatments under one trusted brand.</p>
         </div>
       </div>
     </div>

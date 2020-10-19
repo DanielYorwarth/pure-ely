@@ -28,13 +28,13 @@ const AcademyPage = ({ data }) => {
         bgImage={data.herofull.childImageSharp.fluid}
         data={{
           title: 'COMING SOON',
-          subTitle: 'Our highly skilled therapists and hairdressers at our Training Academy will be offering a wide range of courses. Including; Beauty therapy courses ranging from Gel polish Manicures, to LVL lash lifts',
+          subTitle: 'Our highly skilled therapists and hairdressers at Pure Training Academy will be offering a wide range of courses. These will include beauty therapy courses  ranging from gel polish manicures, to LVL lash lifts.',
           fourCol: {
             title: <ButtonBordered text="Register interest" link="#" />,
             textList: [
-              <div key={1}><ListItem text="Beauty therapy courses ranging from Gel polish Manicures, to LVL lash lifts" /></div>,
-              <div key={3}><ListItem text="Hair dressing courses, ranging from cutting to product sales skills. " /></div>,
-              <div key={2}><ListItem text="Semi-Permanent Make up" /></div>,
+              <div key={1}><ListItem text="Beauty therapy courses ranging from gel polish manicures to LVL lash lifts" /></div>,
+              <div key={3}><ListItem text="Hair dressing courses, ranging from cutting to product sales skills" /></div>,
+              <div key={2}><ListItem text="Semi-Permanent make up" /></div>,
             ]
           }
         }}

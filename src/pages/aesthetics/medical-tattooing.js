@@ -32,11 +32,11 @@ const ServicePage = ({ data }) => {
         data={{
           title: 'Medical Tattooing ',
           oneCol: <p className="font-thin">
-            National Award Winner Laura Marshall works with and is recommended by local surgeons, NHS and Private sector hospitals as well as BUPA to achieve first class results with discreet service. 
+            National Award Winner, Laura Marshall, works with and is recommended by local surgeons, NHS and private sector hospitals, as well as BUPA, to achieve first class results with discreet service. 
             <br/><br/>
-            We can also help with treatments following breast reduction or uplift surgery, pre and post gender reassignment surgery, or gynaecomastia surgery. 
+            We can also help with treatments following breast reduction or uplift surgery, pre and post gender reassignment surgery, or gynaecomastia surgery.
             <br/><br/>
-            Our speciality is treatment which is outside of the triggering medical institutions, and in a completely private luxury environment.
+            Our speciality is treatment that is outside of the triggering medical institutions and in a completely private luxury environment.
           </p>
         
         }}
@@ -65,9 +65,9 @@ const ServicePage = ({ data }) => {
               }
             ]}
             alignPrice="bottom"
-            upperText={<p>Your comfort and safety is at the top of our priorities, so rest assured all items used are medical grade, fully disposable and above the strict PPE compliance regulations- as standard. 
+            upperText={<p>Your comfort and safety is at the top of our priorities, so rest assured all items used are medical grade, fully disposable and above the strict PPE compliance regulations, as standard. 
                 <br/><br/>
-                Consultations to be taken before treatment, in person or via private video call.
+                Consultations are to be taken before treatment, in person or via private video call.
               </p>
             }
           />

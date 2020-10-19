@@ -34,7 +34,7 @@ const ServicePage = ({ data }) => {
             <div className="mb-10 md:mb-0" key={1}>
               <div className="mb-5">
                 <h4 className="text-xl mb-2">PURE DERMAPLANING <b>£65 (60 mins)</b></h4>
-                <p className="font-light">This treatment is purely dermaplaning. Working on all skin types, reducing any dullness, fine lines, and acne scarring and getting rid of fine hairs and dead skin cells on the surface of the skin, helping the luxurious Avant finishing products to absorb even deeper into the skin.</p>
+                <p className="font-light">This treatment is purely dermaplaning. It works  on all skin types to reduce any dullness, fine lines, and acne scarring. This treatment gets  rid of fine hairs and dead skin cells on the surface of the skin, helping the luxurious Avant finishing products to absorb even deeper into the skin.</p>
               </div>
               <div>
                 <h4 className="text-xl mb-2">PURE RELAX FACIALL <b>£65 (45 mins)</b></h4>
@@ -44,7 +44,7 @@ const ServicePage = ({ data }) => {
             <div key={2}>
               <div className="mb-5">
                 <h4 className="text-xl mb-2">PURE REJUVENATION & DERMAPLANING <b>£80 (70 mins)</b></h4>
-                <p className="font-light">Be totally rejuvenated and fresh faced with our rejuvenation facial including dermaplaning. Starting with a deep cleanse from the dermaplaning, followed by rejuvenating glow products and finishing with a head and shoulder massage, ensuring you are completely revitalized.</p>
+                <p className="font-light">Be totally rejuvenated and fresh faced with our rejuvenation facial, including dermaplaning. This treatment starts with a deep cleanse from the dermaplaning,, which is followed by rejuvenating glow products, finishing with a head and shoulder massage. This ensures  you are completely revitalized.</p>
               </div>
               <div>
                 <h4 className="text-xl mb-2">Pure Dermaplaning <b>£65 (50 mins)</b></h4>

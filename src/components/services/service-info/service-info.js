@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 import Price from '../../elements/price/price';
 import ListItem from '../../elements/list-item/list-item';
 
-const ServiceInfo = ({title, priceList, upperText, list, lowerText, alignPrice, row}) => {
+const ServiceInfo = ({title, priceList, upperText, list, lowerText, alignPrice, row, smallPrice}) => {
   let PriceListMap = priceList && (
     <div className={`${row ? 'block' : 'flex'}`}>
       {priceList.map((price, i) => (
-        <Price key={i} padding={price.padding} price={price.price} text={price.text}/>
+        <Price key={i} padding={price.padding} small={smallPrice} price={price.price} text={price.text}/>
       ))}
     </div>
   );
@@ -40,7 +40,8 @@ ServiceInfo.propTypes = {
   upperText: PropTypes.string,
   list: PropTypes.object,
   lowerText: PropTypes.string,
-  row: PropTypes.bool
+  row: PropTypes.bool,
+  smallPrice: PropTypes.bool
 }
 
 export default ServiceInfo;

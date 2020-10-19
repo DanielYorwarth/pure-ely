@@ -8,22 +8,27 @@ import Socials from '../elements/socials/socials';
 import './footer.styles.scss';
 
 const Footer = ({logoType}) => {
-  let email;
+  let email,tel;
   switch (logoType) {
     case 'beauty':
       email = 'info@pureely.co.uk'
+      tel = '01353 661 321'
       break;
     case 'aesthetics':
       email = 'info@oureelyaesthetics.co.uk'
+      tel = '01353 661 628'
       break;
     case 'academy':
       email = 'info@pureely.co.uk'
+      tel = '01353 661 321'
       break;
     case 'hair':
       email = 'info@pureelyhair.co.uk'
+      tel = '01353 661 628'
       break;
     default:
       email = 'info@pureely.co.uk'
+      tel = '01353 661 321'
       break;
   }
   return (
@@ -35,7 +40,7 @@ const Footer = ({logoType}) => {
           </div>
           <div className="mb-3 md:mb-8">
             <span className="pr-6"><a href={`mailto:${email}`}>{email}</a></span>
-            <a href="tel:01353661321">01353 661 321</a>
+            <a href={`tel:${tel.replace(/\s/g, '')}`}>{tel}</a>
           </div>
           <ul className="flex flex-wrap mb-8 md:mb-0 justify-center md:justify-start leading-loose">
             {[

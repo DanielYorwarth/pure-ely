@@ -90,16 +90,12 @@ const ServicePage = ({ data }) => {
               }
             ]}
             alignPrice="bottom"
-            upperText={<p>Already enjoyed a permanent makeup treatment from us in the past? Keeps 
-                your permanent make up looking fresh and crisp, perfect for that upcoming 
-                event, photoshoot or time away. 
+            upperText={<p>
+                Already enjoyed a permanent makeup treatment from us in the past? Colour boosting keeps your permanent make up looking fresh and crisp and is perfect for that upcoming event, photo-shoot or time away.              
                 <br/><br/>
-                We will only colour boost previous clients due to shade matching technology 
-                used in our pigments. If you need a boost but have been treated elsewhere 
-                beforehand you will be treated as a new client. 
+                We will only colour boost previous clients due to shade matching technology used in our pigments. If you need a boost, but have been treated elsewhere beforehand, you will be treated as a new client.
                 <br/><br/>
-                *Consultation necessary for Colour Boost’s after 24 months from the first 
-                treatment. This is to assess the skins integrity and colour saturation levels*
+                *Consultation necessary for Colour Boost’s after 24 months from the first treatment. This is to assess the skins integrity and colour saturation levels.*
               </p>
             }
           />

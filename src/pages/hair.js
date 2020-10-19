@@ -31,30 +31,78 @@ const HairPage = ({ data }) => {
         bgImage={data.herofull.childImageSharp.fluid}
         data={{
           title: 'Hair',
-          subTitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+          subTitle: 'New for 2020, Pure Ely Hair is a new luxury salon in the heart of Ely, Cambridge.  Our salon offers a range of cut and colour packages as well as hair styling special occasions, including bridal packages. We also are able to offer keratin-smoothing treatments, to eliminate frizz and create smooth, shiny hair.',
         }}
       />
       {loaded && <div>
       <TwoColFullScreen cols={[{
           bg: 'text-white bg-primary-darker',
-          content: <ServiceInfo 
-            key={1}
-            title="CUTTING"
-            priceList={[
-              {
-                price: '£52',
-                text: 'Ladies cut & finish',
-                padding: 'pr-6'
-              },
-              {
-                price: '£32',
-                text: 'Gents Cut & Finish',
+          content: <div>
+            <ServiceInfo 
+              key={1}
+              title="CUTTING"
+              priceList={[
+                {
+                  price: '£52',
+                  text: 'Ladies cut & finish',
+                  padding: 'pr-6'
+                },
+                {
+                  price: '£33',
+                  text: 'Gents Cut & Finish',
+                }
+              ]}
+              smallPrice
+              alignPrice="bottom"
+              upperText={<div>
+                  <p>
+                  *Prices include cleanse & condition, cutting, Blowdry and finish . <br/>Under 13yrs half price
+                  </p>
+                  <h3 className="text-2xl -mb-8 font-bold mt-6">Managing Director</h3>
+                </div>
               }
-            ]}
-            alignPrice="bottom"
-            upperText={<p>*Prices include cleanse & condition, cutting, Blowdry and finish . <br/>Under 13yrs half price</p>
-            }
-          />
+            />
+            <ServiceInfo 
+              key={2}
+              smallPrice
+              priceList={[
+                {
+                  price: '£50',
+                  text: 'Ladies cut & finish',
+                  padding: 'pr-6'
+                },
+                {
+                  price: '£30',
+                  text: 'Gents Cut & Finish',
+                }
+              ]}
+              alignPrice="bottom"
+              upperText={<div>
+                  <h3 className="text-2xl -mb-8 font-bold">Creative Stylist</h3>
+                </div>
+              }
+            />
+            <ServiceInfo 
+              key={2}
+              smallPrice
+              priceList={[
+                {
+                  price: '£48',
+                  text: 'Ladies cut & finish',
+                  padding: 'pr-6'
+                },
+                {
+                  price: '£28',
+                  text: 'Gents Cut & Finish',
+                }
+              ]}
+              alignPrice="bottom"
+              upperText={<div>
+                  <h3 className="text-2xl -mb-8 font-bold">Senior Stylist</h3>
+                </div>
+              }
+            />
+            </div>
         },
         {
           bg: 'bg-white',
@@ -84,69 +132,261 @@ const HairPage = ({ data }) => {
         },
         {
           bg: 'bg-primary-darker text-white md:text-black md:bg-white',
-          content: <ServiceInfo 
-            key={3}
-            title="COLOUR"
-            priceList={[
-              {
-                price: '£65',
-                text: 'T section highlight - Placement of highlights along the parting and hair line.',
-                padding: 'mb-4'
-              },
-              {
-                price: '£82',
-                text: '½ head highlights',
-                padding: 'mb-4'
-
-              },
-              {
-                price: '£90',
-                text: 'Full head bleaching - Scalp bleac',
-                padding: 'mb-4'
-
-              },
-              {
-                price: '£70',
-                text: 'Combination colour - Partial foils and between colour',
-                padding: 'mb-4'
-
-              },
-              {
-                price: '£90',
-                text: 'Creative colour - Includes Balayage, free lights, ombre, vivid colour toning',
-                padding: 'mb-4'
-
-              },
-              {
-                price: '£55',
-                text: 'Global all over colour - Includes gloss, semi or permanent.',
-                padding: 'mb-4'
-
-              },
-              {
-                price: 'P.O.A - consultation required',
-                text: 'Colour correction - Light to dark, dark to light or any major corrective colour work.',
-
+          content: <div>
+              <ServiceInfo 
+              key={3}
+              title="COLOUR"
+              alignPrice="bottom"
+              upperText="*all new colour clients require skin test 48 hours prior to appointment."
+              row
+            />
+            <ServiceInfo 
+              key={1}
+              smallPrice
+              priceList={[
+                {
+                  price: '£68',
+                  text: 'Managing Director',
+                  padding: 'pr-6'
+                },
+                {
+                  price: '£65',
+                  text: 'Creative Stylist',
+                  padding: 'pr-6'
+                },
+                {
+                  price: '£60',
+                  text: 'Senior Stylist',
+                }
+              ]}
+              alignPrice="bottom"
+              upperText={<div>
+                  <h3 className="text-3xl text-primary font-extrabold -mt-6">T section highlight</h3>
+                  <p className="-mb-4">
+                  *Placement of highlights along the parting and hair line.
+                  </p>
+                </div>
               }
-            ]}
-            alignPrice="bottom"
-            upperText="*all new colour clients require skin test 48 hours prior to appointment."
-            row
-          />
+            />
+            <ServiceInfo 
+              smallPrice
+              key={1}
+              priceList={[
+                {
+                  price: '£85',
+                  text: 'Managing Director',
+                  padding: 'pr-6'
+                },
+                {
+                  price: '£82',
+                  text: 'Creative Stylist',
+                  padding: 'pr-6'
+                },
+                {
+                  price: '£80',
+                  text: 'Senior Stylist',
+                }
+              ]}
+              alignPrice="bottom"
+              upperText={<div>
+                  <h3 className="text-3xl -mb-6 text-primary font-extrabold">½ head highlights</h3>
+                </div>
+              }
+            />
+            <ServiceInfo 
+              smallPrice
+              key={1}
+              priceList={[
+                {
+                  price: '£98',
+                  text: 'Managing Director',
+                  padding: 'pr-6'
+                },
+                {
+                  price: '£92',
+                  text: 'Creative Stylist',
+                  padding: 'pr-6'
+                },
+                {
+                  price: '£88',
+                  text: 'Senior Stylist',
+                }
+              ]}
+              alignPrice="bottom"
+              upperText={<div>
+                  <h3 className="text-3xl -mb-6 text-primary font-extrabold">Full head bleaching (Scalp bleac)</h3>
+                </div>
+              }
+            />
+            <ServiceInfo 
+              smallPrice
+              key={1}
+              priceList={[
+                {
+                  price: '£70',
+                  text: 'Managing Director',
+                  padding: 'pr-6'
+                },
+                {
+                  price: '£64',
+                  text: 'Creative Stylist',
+                  padding: 'pr-6'
+                },
+                {
+                  price: '£60',
+                  text: 'Senior Stylist',
+                }
+              ]}
+              alignPrice="bottom"
+              upperText={<div>
+                  <h3 className="text-3xl text-primary font-extrabold">Combination colour</h3>
+                  <p className="-mb-4">
+                  *Partial foils and between colour
+                  </p>
+                </div>
+              }
+            />
+            <ServiceInfo 
+              smallPrice
+              key={1}
+              priceList={[
+                {
+                  price: '£95',
+                  text: 'Managing Director',
+                  padding: 'pr-6'
+                },
+                {
+                  price: '£90',
+                  text: 'Creative Stylist',
+                  padding: 'pr-6'
+                },
+                {
+                  price: '£88',
+                  text: 'Senior Stylist',
+                }
+              ]}
+              alignPrice="bottom"
+              upperText={<div>
+                  <h3 className="text-3xl text-primary font-extrabold">Creative colour</h3>
+                  <p className="-mb-4">
+                  *Includes Balayage, free lights, ombre, vivid colour toning
+                  </p>
+                </div>
+              }
+            />
+            <ServiceInfo 
+              smallPrice
+              key={1}
+              priceList={[
+                {
+                  price: '£55',
+                  text: 'Managing Director',
+                  padding: 'pr-6'
+                },
+                {
+                  price: '£52',
+                  text: 'Creative Stylist',
+                  padding: 'pr-6'
+                },
+                {
+                  price: '£50',
+                  text: 'Senior Stylist',
+                }
+              ]}
+              alignPrice="bottom"
+              upperText={<div>
+                  <h3 className="text-3xl text-primary font-extrabold">Global all over colour</h3>
+                  <p className="-mb-4">
+                  *Includes gloss, semi or permanent
+                  </p>
+                </div>
+              }
+            />
+            <ServiceInfo 
+              smallPrice
+              key={1}
+              priceList={[
+                {
+                  price: '£55',
+                  text: 'Managing Director',
+                  padding: 'pr-6'
+                },
+                {
+                  price: '£52',
+                  text: 'Creative Stylist',
+                  padding: 'pr-6'
+                },
+                {
+                  price: '£50',
+                  text: 'Senior Stylist',
+                }
+              ]}
+              alignPrice="bottom"
+              upperText={<div>
+                  <h3 className="text-3xl text-primary font-extrabold">P.O.A - consultation required</h3>
+                  <p className="-mb-4">
+                  *Colour correction - Light to dark, dark to light or any major corrective colour work.
+                  </p>
+                </div>
+              }
+            />
+          </div>
         },
         {
           bg: 'bg-white md:text-white md:bg-primary-darker',
-          content: <ServiceInfo 
-            key={4}
-            title="KERATIN SMOOTHING"
-            priceList={[
-              {
-                price: '£160-200',
-              }              
-            ]}
-            alignPrice="top"
-            upperText={<p>Designed to eliminate frizz, create shine and smoothness to even the most unruly hair. A perfect treatment for difficult to tame hair or highly over processed locks. Please call or drop by for a consultation.<br/>*£50 deposit required upon booking .</p>}
-          />
+          content: <div>
+            <ServiceInfo 
+              key={4}
+              title="KERATIN SMOOTHING"
+              priceList={[
+                {
+                  price: '£160-200',
+                }              
+              ]}
+              alignPrice="top"
+              upperText={<p className="mb-10 ">Designed to eliminate frizz, create shine and smoothness to even the most unruly hair. A perfect treatment for difficult to tame hair or highly over processed locks. Please call or drop by for a consultation.<br/>*£50 deposit required upon booking .</p>}
+            />
+            <ServiceInfo 
+              key={2}
+              title="Junior Stylist "
+              priceList={[
+                {
+                  price: '£18',
+                  text: 'Blow dry ',
+                  padding: 'mb-4'
+                },
+                {
+                  price: '£25',
+                  text: 'Cut and blow dry',
+                  padding: 'mb-4'
+
+                },
+                {
+                  price: '£35',
+                  text: 'T section highlights',
+                  padding: 'mb-4'
+
+                },
+                {
+                  price: '£37',
+                  text: '½ head highlights',
+                  padding: 'mb-4'
+                },
+                {
+                  price: '£50',
+                  text: 'Full head highlights',
+                  padding: 'mb-4'
+                },
+                {
+                  price: '£30',
+                  text: 'All over colour',
+                  padding: 'mb-4'
+                },
+              ]}
+              alignPrice="bottom"
+              row          
+            />
+          </div>
         }
       ]}/>
       <Testimonials />

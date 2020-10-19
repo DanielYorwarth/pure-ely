@@ -64,13 +64,13 @@ const AestheticsPage = ({ data }) => {
               }
             ]}
             alignPrice="center"
-            upperText={<p>Known as the &apos;5 point Facelift&apos; this skin laxity treatment Profhilo remodels skin to tighten and lift as well as restore radiance from the deepest layers of your skin. Profhilo acts like a hydration elixir under the skin delivering potent results as a stand alone treatment or in combination with other aesthetic treatment regimes (such as Botox®) 
+            upperText={<p>Known as the &apos;5 point Facelift&apos; this skin laxity treatment, Profhilo, remodels skin to tighten and lift as well as restore radiance from the deepest layers of your skin. Profhilo acts like a hydration elixir under the skin, delivering potent results as a stand-alone treatment or in combination with other aesthetic treatment regimes (such as Botox®). 
               <br/> <br/>
-              Initial treatments are recommended in a set of two, each 4 weeks apart, and top ups can be given as required, est.12 months apart. 
+              Initial treatments are recommended in a set of two, each four weeks apart, and top ups can be given as required, est.12 months apart.
               <br/> <br/>
-              NB- Single doses available if preferred but recommended as a booster rather than a stand alone treatment. This is at your discretion. 
+              NB- Single doses are available if preferred, but recommended as a booster rather than a stand-alone treatment. This is at your discretion.
               <br/> <br/>
-              Suitable for all areas including Hands </p>
+              Suitable for all areas including hands.</p>
             }
           />
         },
@@ -91,10 +91,10 @@ const AestheticsPage = ({ data }) => {
               }
             ]}
             alignPrice="center"
-            upperText={<p>Enhancing natures best work with a little subtle help. <br/><br/>
-                We prefer to work with your natural curves and contours but will happily work with you to give you the results you desire with the highest grade reputable products.<br/> <br/>
-                Nothing too drastic is taken on in any one appointment to ensure you heal adequately, and love the look overall. <br/><br/>
-                Maybe you want a subtle smoothing of laughter lines, or a perfect plump pout we are here to give you the treatment of your dreams. 
+            upperText={<p>Enhancing natures best work with a little subtle help.<br/><br/>
+                We prefer to work with your natural curves and contours, but will happily work with you to give you the results you desire with the highest-grade reputable products.<br/> <br/>
+                Nothing too drastic is taken on in any one appointment to ensure you heal adequately, and love the look overall.<br/><br/>
+                Maybe you want a subtle smoothing of laughter lines, or a perfect plump pout. Whatever your choice, we are here to give you the treatment of your dreams.
               </p>
             }
             list={{
@@ -120,7 +120,7 @@ const AestheticsPage = ({ data }) => {
               },
             ]}
             alignPrice="top"
-            upperText={<p>Tear trough filler treatment quickly and effectively restores lost volume, and reduces dark circles under the eyes. It also reduces fine lines and wrinkles as the dermal filler will boost collagen production by attracting hydrating for the months to come.</p>}
+            upperText={<p>Tear trough filler treatment quickly and effectively restores lost volume and reduces dark circles under the eyes. It also reduces fine lines and wrinkles, as the dermal filler will boost collagen production by attracting hydration for the months to come.</p>}
           />
         },
         {
@@ -163,9 +163,7 @@ const AestheticsPage = ({ data }) => {
               },
             ]}
             alignPrice="top"
-            upperText={<p>Treats Hyperhidrosis (excessive sweating). Also used for men, summer commuting, job interviews and weddings or any time you may choose to have less underarm sweat.
-              <br />
-              Treatment lasts approx 6 Months.
+            upperText={<p>Treats hyperhidrosis (excessive sweating). This treatment is for both men and women and will last for up to six months. Use this treatment for a specific occasion such as a wedding or simply to prevent excess sweating. 
             </p>}
           />
         },
@@ -186,7 +184,7 @@ const AestheticsPage = ({ data }) => {
               }
             ]}
             alignPrice="center"
-            upperText={<p>B12 is being used commonly as a pick me up for times of over work, stress, and tiring lifestyles. As always we recommend you speak to your Dr if you are concerned about an ongoing deficiency.</p>}
+            upperText={<p>B12 is being commonly used as a pick me up for times of over-work, stress, and simply in conjunction with a tiring lifestyle. As always, we recommend you speak to your doctor if you are concerned about an on-going deficiency.</p>}
             list={{
               title: 'BENEFITS of B12 include:',
               items: [
@@ -198,11 +196,11 @@ const AestheticsPage = ({ data }) => {
                 'Supports healthy hair, skin and nails',
                 'Reduces risk of macular degeneration',
                 'Even aids weight loss',
-                'Increases brain function ',
+                'Increases brain function',
                 'Supports bone health and prevents osteoporosis',
               ]
             }}
-            lowerText={<p>Booking will be at an agreed schedule based upon your medical needs. The sessions are flexible and can be booked at your discretion up to a schedule of every 3 days, but are usually weekly or bi weekly  </p>}
+            lowerText={<p>Booking will be at an agreed schedule based upon your medical needs. The sessions are flexible and can be booked at your discretion up to a schedule of every three days, but are usually weekly or bi-weekly.</p>}
           />
         }
       ]}/>

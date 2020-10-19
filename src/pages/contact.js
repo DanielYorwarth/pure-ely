@@ -38,11 +38,6 @@ const ContactPage = ({ data }) => {
         </div>
         <div className="w-full md:w-1/2 lg:w-1/4 mb-10 lg:mb-0 ">
           <h3 className="text-primary text-4xl uppercase font-light leading-tight mb-4">Contact Information</h3>
-          <h3 className="text-primary text-2xl uppercase font-bold leading-tight mb-1">Hair</h3>
-          <p className="text-primary-darkd mb-2">1 High Street Passage, <br/>
-          Ely, CB7 4NB <br/>
-          United Kingdom </p>
-          <a className="mb-10 block" href="mailto:info@pureelyhair.co.uk"><div className="flex flex-wrap text-primary-dark items-start"><img className="pr-2 w-8" src={mailIcon} />info@pureelyhair.co.uk</div></a>
           <h3 className="text-primary text-2xl uppercase font-bold leading-tight mb-1">Beauty</h3>
           <p className="text-primary-dark mb-4">4-8 Three Cups Walk, <br/>
           Ely, CB7 4AN <br/>
@@ -50,7 +45,14 @@ const ContactPage = ({ data }) => {
           <a className="mb-3 block" href="mailto:info@pureely.co.uk"><div className="flex flex-wrap text-primary-dark items-start"><img className="pr-2 w-8" src={mailIcon} />info@pureely.co.uk</div></a>
           <a className="mb-10 block" href="tel:01353661321"><div className="flex flex-wrap text-primary-dark items-start"><img className="pr-2 w-8" src={phoneIcon} />01353 661 321</div></a>
           <h3 className="text-primary text-2xl uppercase font-bold leading-tight mb-1">Hair</h3>
-          <a className="block" href="mailto:info@oureelyaesthetics.co.uk"><div className="flex flex-wrap text-primary-dark items-start"><img className="pr-2 w-8" src={mailIcon} />info@oureelyaesthetics.co.uk</div></a>
+          <p className="text-primary-darkd mb-2">1 High Street Passage, <br/>
+          Ely, CB7 4NB <br/>
+          United Kingdom </p>
+          <a className="mb-3 block" href="mailto:info@pureelyhair.co.uk"><div className="flex flex-wrap text-primary-dark items-start"><img className="pr-2 w-8" src={mailIcon} />info@pureelyhair.co.uk</div></a>
+          <a className="mb-10 block" href="tel:01353661628"><div className="flex flex-wrap text-primary-dark items-start"><img className="pr-2 w-8" src={phoneIcon} />01353 661 628</div></a>
+          <h3 className="text-primary text-2xl uppercase font-bold leading-tight mb-2">Aesthetics</h3>
+          <a className="block mb-3" href="mailto:info@oureelyaesthetics.co.uk"><div className="flex flex-wrap text-primary-dark items-start"><img className="pr-2 w-8" src={mailIcon} />info@oureelyaesthetics.co.uk</div></a>
+          <a className="mb-10 block" href="tel:01353661628"><div className="flex flex-wrap text-primary-dark items-start"><img className="pr-2 w-8" src={phoneIcon} />01353 661 628</div></a>
         </div>
         <div className="w-full md:w-1/2 lg:w-1/4 mb-10 lg:mb-0 leading-relaxed">
           <h3 className="text-primary text-4xl uppercase font-light leading-tight mb-4">OPENING HOURS</h3>

@@ -42,8 +42,8 @@ const Header = ({loaded, logoType}) => {
       </p>
       bookingLink = 'https://online.premiersoftware.co.uk/Book-Online-3G-V2/index2.php?i=21cea48d674d25790ce2f157548cf742&siteID=3'
       openingTimes = <div className="text-white text-xs mt-4">
-        <b>Mon:</b> 9.30am – 5.30pm <br/>
-        <b>Sun:</b> 9.30am – 5.30pm <br/>
+        <b>Tue - Fri:</b> 9.30am – 5.30pm <br/>
+        <b>Sat:</b> 9am – 3pm <br/>
       </div>
       break;
     case 'academy':
@@ -67,7 +67,7 @@ const Header = ({loaded, logoType}) => {
         <b>Tue - Wed:</b> 10am – 6pm <br/>
         <b>Thu:</b> 9.30am – 5.30pm <br/>
         <b>Fri:</b> 10am – 6pm <br/>
-        <b>Sat:</b> 9am – 3pm <br/>
+        <b>Sat:</b> 8am – 3pm <br/>
       </div>
       break;
     default:
